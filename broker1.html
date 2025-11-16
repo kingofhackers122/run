@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content= Royal Signal >
+    <link rel="shortcut icon" href= ../uploads/ />
+    <link rel="apple-touch-icon" sizes="72x72" href="../uploads/" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../uploads/" />
+    <link rel="touch-icon"  sizes="114x114" href="../uploads/">
+    <title>Royal Signal - CPanel</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<style>
+/** {*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+  <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
+                <div class="sidebar-brand-icon ">
+                    <img src="../uploads/royalsignal.png" class="img-profile" width= 30; height= 30; alt="logo">                </div>
+                <div class="sidebar-brand-text mx-3"></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Lists</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="register.php">
+                    <span>Admin List</span></a>
+                        <a class="collapse-item" href="users.php">
+                    <span>Users List</span></a>
+                    <a class="collapse-item" href="trade.php">
+                    <span>Trade List</span></a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                
+            </li>
+
+            <li class="nav-item">
+                
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-donate"></i>
+                    <span>Transactions</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="withdraw.php">Withdraw Log</a>
+                        <a class="collapse-item" href="deposit.php">Deposit Log</a>
+                        <a class="collapse-item" href="other.php">Other Log</a>
+                        <div class="collapse-divider"></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Settings</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Webpage:</h6>
+                        <a class="collapse-item" href="homepage.php">Homepage</a>
+                        <a class="collapse-item" href="mail.php">Send Mail</a>
+                        <a class="collapse-item" href="mails.php">Mail History</a>
+                    </div>
+                </div>
+            </li>
+
+
+           
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+           
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                  
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                                        <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+
+                                    Admin
+                                </span>
+                                
+                                  <img src="../uploads/ips_fav.png" class="img-profile rounded-circle" alt="Image">                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+        
+                                <a class="dropdown-item" href="admin.php">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+
+                
+ <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+
+                    <form action="logout.php" method="POST">
+                        <button type="submit" name="logout_btn" class="btn btn-primary" href="login.php">Logout</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Users form</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <center class='text-danger'> All field is required</center>
+      <center class='text-danger'>* Unique field</center>
+      <form action="code.php" method="POST">
+	      <div class="modal-body">
+           <div class="form-group">
+            <label> Name <span class='text-danger'>*</span></label>
+            <input type="text" name="name" class="form-control" placeholder="Enter Name">
+          </div>
+	        <div class="form-group">
+	        	<label> Username <span class='text-danger'>*</span></label>
+	        	<input type="text" name="username" class="form-control" placeholder="Enter Username">
+	        </div>
+	        <div class="form-group">
+	        	<label> Email <span class='text-danger'>*</span></label>
+	        	<input type="email" name="email" class="form-control" placeholder="Enter Email">
+	        </div>
+          <div class="form-group">
+            <label> Wallet Address <span class='text-danger'>*</span></label>
+            <input type="text" name="wallet" class="form-control" placeholder="Enter Wallet Address">
+          </div>
+	        <div class="form-group">
+	        	<label> Passsword </label>
+	        	<input type="password" name="password" class="form-control" placeholder="Password">
+	        </div>
+	        <div class="form-group">
+	        	<label> Confirm Password </label>
+	        	<input type="password" name="cpassword" class="form-control" placeholder="Confirm Password">
+	        </div>
+          
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="submit" name="user_btn" class="btn btn-primary">Save</button>
+	      </div>
+     </form>
+    </div>
+  </div>
+</div>
+<!--<div>-->
+<!--	<h5> User-->
+	<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">-->
+<!--  New User-->
+<!--</button>-->
+<!--	</h5>-->
+<!--</div>-->
+    <div class="pl-2">
+        <h5>
+            <form action="code.php" method="post">
+                <button type="submit" name="del_0_user" class="btn btn-danger">
+                    Delete 0 balance Users
+                </button>
+            </form>
+        </h5>
+    </div>
+
+ <div class="card-body">
+    <div class="table-responsive">
+         <div class="mb-3">
+        <input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Search User in table.." title="Type in a User">
+      </div>
+    <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <!--<th>Upline_ID</th>-->
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Reg_date</th>
+          <th>Updated_at</th>
+          <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+                   <tr>
+          <td>ID-6912fe7cc1fc7</td>
+          <!--<td></td>-->
+          <td>حسن   علیزاده </td>
+          <td>hasanalizadeh4500@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-11-11 12:16:PM</td>
+          <td>2025-11-16 11:56:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="TLUBbVLNFyLCmksfDdcKejYRxZtba92RZM">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=16978">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="16978">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68eb500ea906f</td>
+          <!--<td></td>-->
+          <td>Melissa  Otero </td>
+          <td>melissalindascarlett@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-10-12 09:56:AM</td>
+          <td>2025-10-12 10:09:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=16857">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="16857">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68db82c353c3c</td>
+          <!--<td></td>-->
+          <td>Elena  Wilson </td>
+          <td>wv75245@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-09-30 10:13:AM</td>
+          <td>2025-11-09 05:04:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=10884">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="10884">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68a9a91338bd5</td>
+          <!--<td></td>-->
+          <td>Victoria  Brightly </td>
+          <td>chiaramatasn@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-08-23 02:44:PM</td>
+          <td>2025-08-27 07:21:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=8480">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="8480">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68a6a39380614</td>
+          <!--<td></td>-->
+          <td>Helen  Lucas </td>
+          <td>helenlucas314@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-08-21 07:44:AM</td>
+          <td>2025-09-09 07:45:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=4117">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="4117">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68a5d40996679</td>
+          <!--<td></td>-->
+          <td>ELLIE ELLIE</td>
+          <td>kizzyoung98@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-08-20 05:10:PM</td>
+          <td>2025-11-10 08:53:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=1388">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="1388">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-6879305bc5aca</td>
+          <!--<td></td>-->
+          <td>José  Hélio</td>
+          <td>helioreis.12@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-07-17 08:20:PM</td>
+          <td>2025-11-14 05:12:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=62">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="62">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-684a00f92c555</td>
+          <!--<td></td>-->
+          <td>Samad Salaudeen</td>
+          <td>samadmonye5@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-06-12 01:20:AM</td>
+          <td>2025-11-16 08:18:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=38">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="38">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-683d7fd50dccc</td>
+          <!--<td></td>-->
+          <td>Miriam Francesca  Artesi </td>
+          <td>miriamartesi.m@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-06-02 01:42:PM</td>
+          <td>2025-06-02 01:45:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=35">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="35">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-683aa053b2e63</td>
+          <!--<td></td>-->
+          <td>Bibhuti Mishra</td>
+          <td>bibhutibhusan98355@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-31 09:25:AM</td>
+          <td>2025-11-02 08:47:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="TYZ9rqVTn6aeF4Kcsj85UVBheLraDA6KW5">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=32">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="32">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68319b55816c1</td>
+          <!--<td></td>-->
+          <td>김진원(KIM JIN WON) 김(KIM)</td>
+          <td>jwkimpro88@naver.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-24 01:14:PM</td>
+          <td>2025-11-15 09:36:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="나의고향은 경상북도문경임">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=28">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="28">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-682d60b39be61</td>
+          <!--<td></td>-->
+          <td>David Tsui</td>
+          <td>davidtsui98@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-21 08:15:AM</td>
+          <td>2025-05-21 09:33:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=23">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="23">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-682c3998a662a</td>
+          <!--<td></td>-->
+          <td>Kishan K</td>
+          <td>k8282096@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-20 11:13:AM</td>
+          <td>2025-05-30 01:01:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=21">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="21">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68291ffa23c10</td>
+          <!--<td></td>-->
+          <td>Lili Anna</td>
+          <td>helperemily9@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-18 02:49:AM</td>
+          <td>2025-07-11 08:09:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=18">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="18">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-6828c0beb9c30</td>
+          <!--<td></td>-->
+          <td>Hamid Khan</td>
+          <td>nm1459018@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-17 08:02:PM</td>
+          <td>2025-05-29 01:18:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=17">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="17">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-682870f88be9a</td>
+          <!--<td></td>-->
+          <td>Victoria  Prew </td>
+          <td>ambermelissa@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-17 02:22:PM</td>
+          <td>2025-06-01 09:08:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=15">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="15">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68286f29de77f</td>
+          <!--<td></td>-->
+          <td>Amber  Melissa </td>
+          <td>ambermelissa@mail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-17 02:13:PM</td>
+          <td>2025-06-05 10:48:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=14">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="14">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-68286e3c7817f</td>
+          <!--<td></td>-->
+          <td>Kim  Lee</td>
+          <td>victoriaprew64@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-17 02:09:PM</td>
+          <td>2025-11-12 06:08:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=13">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="13">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-682866c494d81</td>
+          <!--<td></td>-->
+          <td>Amber  Melissa </td>
+          <td>okeyotiji23@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-17 01:37:PM</td>
+          <td>2025-06-04 06:50:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=10">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="10">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-682747ec85a56</td>
+          <!--<td></td>-->
+          <td>Last test Account test</td>
+          <td>tsholoteebaby@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-16 05:14:PM</td>
+          <td>2025-05-17 09:56:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=9">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="9">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-6826e84897af7</td>
+          <!--<td></td>-->
+          <td>Jenny Jenny</td>
+          <td>nwankwochisom65@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-16 10:26:AM</td>
+          <td>2025-11-16 10:00:AM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=7">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="7">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-6826e7bc16106</td>
+          <!--<td></td>-->
+          <td>Tundra  Isabelle</td>
+          <td>torenelson10@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-16 10:25:AM</td>
+          <td>2025-07-29 11:55:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=6">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="6">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-6826d862c545e</td>
+          <!--<td></td>-->
+          <td>Victoria  Prew</td>
+          <td>Victoria405290@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-16 09:19:AM</td>
+          <td>2025-11-15 11:47:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=5">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="5">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+               <tr>
+          <td>ID-6821fd9e3535b</td>
+          <!--<td></td>-->
+          <td>Muhammad Shabbir</td>
+          <td>muhammaduzairshabbir02@gmail.com</td>
+          <td> <b class= "bg-success" style="text-align: center; margin-top: 10px; padding: 3px 6px; font-size: 10px; margin: 3px; color: white; font-weight: 6em; border-radius: 5px;">ACTIVE</b></td>
+          <td>2025-05-12 05:05:PM</td>
+          <td>2025-11-15 09:36:PM</td>
+          <td style=" display: flex; justify-content: space-between;">
+            <input type="hidden" name="phrase" value="">
+            <a class="btn btn-secondary btn-sm" href="user_edit.php?id=2">Edit</a>
+           <form method="POST" action="code.php">
+                <input type="hidden" name="delete_id" value="2">
+                <!--<button style="margin: 2px;" type="submit" name="delete" class="btn btn-danger btn-sm"> Delete </button>-->
+            </form>
+          </td>        
+        </tr>
+
+             </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; All rights reserved 2025</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+       </div>
+    <!-- End of Content Wrapper -->
+</body>
+
+</html>
