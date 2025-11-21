@@ -1,0 +1,2282 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from admin.pixelstrap.net/crocs/template/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Apr 2025 18:14:23 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=".">
+    <meta name="keywords" content="">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>Admin Dashboard</title>
+    <!-- Google font-->
+    <link rel="preconnect" href="../../../fonts.googleapis.com/index.php">
+    <link rel="preconnect" href="../../../fonts.gstatic.com/index.php" crossorigin="">
+    <link href="../../../fonts.googleapis.com/css2a0cf.css?family=Lexend:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="../../../fonts.googleapis.com/css8807.css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/datatables.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/date-picker.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/vector-map.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/fullcalender.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link id="color" rel="stylesheet" href="assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.js"></script>
+    
+    
+  </head>
+  <body onload="startTime()"> 
+    <!-- loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader">    
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+    <!-- loader ends-->
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+      <!-- Page Header Start-->
+      <div class="page-header">
+        <div class="header-wrapper row m-0">
+          <div class="header-logo-wrapper col-auto p-0">
+            <div class="logo-wrapper" ><a href="index.php"><img class=" for-light" src="assets/images/logo/logo-1.png" alt="" style="height:100px; width:100px;"><img class=" for-dark" src="assets/images/logo/logo.png" alt="" style="height:100px; width:100px;"></a></div>
+            <div class="toggle-sidebar">
+              <svg class="sidebar-toggle"> 
+                <use href="assets/svg/icon-sprite.svg#stroke-animation"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="left-header col-xxl-5 col-xl-6 col-md-4 col-auto box-col-6 horizontal-wrapper p-0">
+            <div class="left-menu-header">
+              <ul class="header-left"> 
+                <li>
+                  <div class="form-group w-100"> 
+                    <div class="Typeahead Typeahead--twitterUsers">
+                      <div class="u-posRelative d-flex">
+                        <svg class="search-bg svg-color me-2">
+                          <use href="assets/svg/icon-sprite.svg#fill-search"></use>
+                        </svg>
+                        <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search anything..." name="q" title="">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-right col-xxl-7 col-xl-6 col-auto box-col-6 pull-right right-header p-0 ms-auto">
+            <ul class="nav-menus">
+              <li class="serchinput">
+                <div class="serchbox">
+                  <svg>
+                    <use href="assets/svg/icon-sprite.svg#fill-search"></use>
+                  </svg>
+                </div>
+                <div class="form-group search-form">
+                  <input type="text" placeholder="Search here...">
+                </div>
+              </li>
+              <li>
+                <div class="mode">
+                  <svg>
+                    <use href="assets/svg/icon-sprite.svg#fill-dark"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="profile-nav onhover-dropdown p-0">
+                <div class="d-flex align-items-center profile-media"><img class="b-r-10 img-40" src="assets/images/dashboard/profile.png" alt="">
+                  <div class="flex-grow-1"><span>Alen Miller</span>
+                    <p class="mb-0">UI Designer </p>
+                  </div>
+                </div>
+                <ul class="profile-dropdown onhover-show-div">
+                  <li><a href="user-profile.php"><i data-feather="user"></i><span>Account </span></a></li>
+                  <li><a href="email-application.php"><i data-feather="mail"></i><span>Inbox</span></a></li>
+                  <li><a href="task.php"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
+                  <li><a href="edit-profile.php"><i data-feather="settings"></i><span>Settings</span></a></li>
+                  <li><a href="login.php"><i data-feather="log-in"> </i><span>Log in</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">                        
+            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+            <div class="ProfileCard-details">
+            <div class="ProfileCard-realName">{{name}}</div>
+            </div>
+            </div>
+          </script>
+          <script class="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
+        </div>
+      </div>
+      <!-- Page Header Ends                              -->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper">
+        <!-- Page Sidebar Start-->
+        <div class="sidebar-wrapper" data-layout="fill-svg" style="background:rgb(36,29,167)">
+          <div>
+            <div class="logo-wrapper"><a href="index.php"><img class="img-fluid" src="assets/images/logo/logo.png" alt="" style="width:100px;"></a>
+              <div class="toggle-sidebar">
+                <svg class="sidebar-toggle"> 
+                  <use href="assets/svg/icon-sprite.svg#toggle-icon"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="logo-icon-wrapper"><a href="index.php"><img class="img-fluid" src="assets/images/logo/logo-icon.png" alt="" style="width:50px; height:50px;"></a></div>
+            <nav class="sidebar-main">
+              <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+              <div id="sidebar-menu">
+                <ul class="sidebar-links" id="simple-bar">
+                  <li class="back-btn"><a href="index.php"><img class="img-fluid" src="assets/images/logo/logo-icon.png" alt="" style="width:50px; height:50px;"></a>
+                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+                  </li>
+                  <li class="pin-title sidebar-main-title">
+                    <div> 
+                      <h6>Pinned</h6>
+                    </div>
+                  </li>
+                  <li class="sidebar-main-title">
+                    <div>
+                      <h6 class="lan-1">Admin Dashboard</h6>
+                    </div>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="index.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-home"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-home"></use>
+                      </svg><span >Dashboard          </span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="registered-users.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-user"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-user"></use>
+                      </svg><span>Registered Users</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="manage-stocks.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-layout"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-layout"></use>
+                      </svg><span>Manage Stocks</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="manage-commodities.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-layout"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-layout"></use>
+                      </svg><span>Manage Commodities</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="manage-bots.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-layout"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-layout"></use>
+                      </svg><span>Manage Bots</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="manage-package.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-layout"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-layout"></use>
+                      </svg><span>Manage Package</span></a>
+                  </li>
+                  <!-- <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="copy-traders.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-widget"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-widget"></use>
+                      </svg><span>Copy Trading</span></a>
+                  </li> -->
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-board"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-board"></use>
+                      </svg><span>Deposit Confirmation</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="deposit-confirmation.php">Deposit Confirmation</a></li>
+                      <li><a href="deposit-history.php">Deposit History</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-layout"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-layout"></use>
+                      </svg><span>Withdraws</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="withdraw-confirmation.php">Withdraw Confirmation</a></li>
+                      <li><a href="withdraw-history.php">Withdraw History</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="confirm-upgrade.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-layout"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-layout"></use>
+                      </svg><span>Confirm Upgrade</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="verification-confirmation.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-user"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-user"></use>
+                      </svg><span>Verification Confirmation</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-knowledgebase"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-knowledgebase"></use>
+                      </svg><span>Trading</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="active-trade.php">Active Trade</a></li>
+                      <li><a href="trade-history.php">Trading History</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-main-title">
+                    <div>
+                      <h6>Support Features</h6>
+                    </div>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="educational-videos.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-gallery"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-gallery"></use>
+                      </svg><span>Educational Videos</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="payment-gateway.php">
+                      <svg class="stroke-icon">
+                        <use href="assets/svg/icon-sprite.svg#stroke-gallery"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="assets/svg/icon-sprite.svg#fill-gallery"></use>
+                      </svg><span>Payment Gateway</span></a>
+                  </li>
+                  <form action="php/logout.php" method="POST">
+                      <button style="background-color:transparent; border:none;">
+                      <li class="sidebar-list btn btn-danger mt-2 mb-5 text-white d-flex text-center justify-content-center">
+                          <a class="sidebar-link sidebar-title link-nav">
+                            <svg class="stroke-icon">
+                              <use href="assets/svg/icon-sprite.svg#stroke-user"></use>
+                            </svg>
+                            <svg class="fill-icon">
+                              <use href="assets/svg/icon-sprite.svg#fill-user"></use>
+                            </svg><span class="text-white text-center">Logout</span>
+                          </a>
+                        </li>
+                      </button>
+                    </form>
+                </ul>
+              </div>
+              <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+            </nav>
+          </div>
+        </div>
+        <!-- Page Sidebar Ends-->
+
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container for-light" style="position:relative; top:70px;">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100 Cash CFD"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR to USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "colorTheme": "light",
+  "locale": "en"
+}
+  </script>
+</div>
+
+<div class="tradingview-widget-container for-dark mb-3" style="position:relative; top:70px;">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100 Cash CFD"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR to USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+        <div class="page-body" style="margin-top:80px; padding:10px;">
+
+<div class="container-fluid">        
+    <div class="page-title">
+        <div class="row">
+            <div class="col-sm-6 p-0">
+                <h3 class="fw-bold mb-3">Users</h3>
+            </div>
+            <div class="col-sm-6 p-0">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">
+                    <svg class="stroke-icon">
+                        <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
+                    </svg></a></li>
+                <li class="breadcrumb-item">Dashboard</li>
+                <li class="breadcrumb-item active">Users     </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Container-fluid starts-->
+<div class="container-fluid ecommerce-dashboard">
+    <div class="col-sm-12 mt-1">
+                <div class="card">
+            <div class="card-header">
+                <h4>Registered Users</h4>
+            </div>
+            <div>
+            <div class="card-block row" >
+                <div class="col-sm-12 col-lg-12 col-xl-12">
+                    <div class="table-responsive table-striped">
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Country</th>
+                                    <th>Package</th>
+                                    <th>Deposit</th>
+                                    <th>Profit Earned</th>
+                                    <th>Referral</th>
+                                    <th>Email Status</th>
+                                    <th>Identity Status</th>
+                                    <th>Account Status</th>
+                                    <th>Block/Unblock</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                    <tr class="mb-5">
+                                        <td>1</td>
+                                        <td>ABRAHAM</td>
+                                        <td>OSSAI</td>
+                                        <td>abrahamgreat@mailinator.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>USD 750</td>
+                                        <td>USD 26140095</td>
+                                        <td>USD 100</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="abrahamgreat@mailinator.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=abrahamgreat@mailinator.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=abrahamgreat@mailinator.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=abrahamgreat@mailinator.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=abrahamgreat@mailinator.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=abrahamgreat@mailinator.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="abrahamgreat@mailinator.com">
+                                                            <input type="hidden" name="password" value="12345">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=abrahamgreat@mailinator.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=abrahamgreat@mailinator.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>2</td>
+                                        <td>Enuma </td>
+                                        <td>Jeffrey </td>
+                                        <td>enumajeff@gmail.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>USD 1000</td>
+                                        <td>USD 400000</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="enumajeff@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=enumajeff@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=enumajeff@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=enumajeff@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=enumajeff@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=enumajeff@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="enumajeff@gmail.com">
+                                                            <input type="hidden" name="password" value="Papa2020$$$">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=enumajeff@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=enumajeff@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>3</td>
+                                        <td>Morgan </td>
+                                        <td>Lisa</td>
+                                        <td>terrenceross432@gmail.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="terrenceross432@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=terrenceross432@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=terrenceross432@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=terrenceross432@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=terrenceross432@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=terrenceross432@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="terrenceross432@gmail.com">
+                                                            <input type="hidden" name="password" value="1234567890">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=terrenceross432@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=terrenceross432@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>4</td>
+                                        <td>Vladimir</td>
+                                        <td>Grigorenko</td>
+                                        <td>mhummock@mail.ru</td>
+                                        <td>Russia</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="mhummock@mail.ru">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=mhummock@mail.ru">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=mhummock@mail.ru">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=mhummock@mail.ru">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=mhummock@mail.ru">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=mhummock@mail.ru">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="mhummock@mail.ru">
+                                                            <input type="hidden" name="password" value="Vova1234">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=mhummock@mail.ru">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=mhummock@mail.ru">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>5</td>
+                                        <td>massss</td>
+                                        <td>dhonii</td>
+                                        <td>tuxypyqy@thetechnext.net</td>
+                                        <td>India</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="tuxypyqy@thetechnext.net">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=tuxypyqy@thetechnext.net">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=tuxypyqy@thetechnext.net">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=tuxypyqy@thetechnext.net">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=tuxypyqy@thetechnext.net">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=tuxypyqy@thetechnext.net">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="tuxypyqy@thetechnext.net">
+                                                            <input type="hidden" name="password" value="Sources123">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=tuxypyqy@thetechnext.net">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=tuxypyqy@thetechnext.net">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>6</td>
+                                        <td>Jacques</td>
+                                        <td>Janse van Rensburg</td>
+                                        <td>jjvanrensburg7208@gmail.com</td>
+                                        <td>South Africa</td>
+                                        <td>Mini</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="jjvanrensburg7208@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=jjvanrensburg7208@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=jjvanrensburg7208@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=jjvanrensburg7208@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=jjvanrensburg7208@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=jjvanrensburg7208@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="jjvanrensburg7208@gmail.com">
+                                                            <input type="hidden" name="password" value="J@cquesVr9414">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=jjvanrensburg7208@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=jjvanrensburg7208@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>7</td>
+                                        <td>Hassan </td>
+                                        <td>Omar</td>
+                                        <td>egyptair754@gmail.com</td>
+                                        <td>Egypt</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="egyptair754@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=egyptair754@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=egyptair754@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=egyptair754@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=egyptair754@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=egyptair754@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="egyptair754@gmail.com">
+                                                            <input type="hidden" name="password" value="Hassan004">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=egyptair754@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=egyptair754@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>8</td>
+                                        <td>Nesko</td>
+                                        <td>Jay</td>
+                                        <td>neskojay@gmail.com</td>
+                                        <td>Angola</td>
+                                        <td>Mini</td>
+                                        <td>NZD 0</td>
+                                        <td>NZD 0</td>
+                                        <td>NZD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="neskojay@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=neskojay@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=neskojay@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=neskojay@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=neskojay@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=neskojay@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="neskojay@gmail.com">
+                                                            <input type="hidden" name="password" value="123456">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=neskojay@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=neskojay@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>9</td>
+                                        <td>Pablo</td>
+                                        <td>Gonzalez</td>
+                                        <td>pg4392762@gmail.com</td>
+                                        <td>Venezuela</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="pg4392762@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=pg4392762@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=pg4392762@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=pg4392762@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=pg4392762@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=pg4392762@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="pg4392762@gmail.com">
+                                                            <input type="hidden" name="password" value="Aw2988*?">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=pg4392762@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=pg4392762@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>10</td>
+                                        <td>James</td>
+                                        <td>Blowes</td>
+                                        <td>blowesj771@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="blowesj771@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=blowesj771@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=blowesj771@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=blowesj771@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=blowesj771@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=blowesj771@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="blowesj771@gmail.com">
+                                                            <input type="hidden" name="password" value="@blowes123">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=blowesj771@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=blowesj771@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>11</td>
+                                        <td>Angie </td>
+                                        <td>Jumawan</td>
+                                        <td>ajumawan522@gmail.com</td>
+                                        <td>Philippines</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="ajumawan522@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=ajumawan522@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=ajumawan522@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=ajumawan522@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=ajumawan522@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=ajumawan522@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="ajumawan522@gmail.com">
+                                                            <input type="hidden" name="password" value="123456">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=ajumawan522@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=ajumawan522@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>12</td>
+                                        <td>uku39460@toaik.com</td>
+                                        <td>uku39460@toaik.com</td>
+                                        <td>uku39460@toaik.com</td>
+                                        <td>Anguilla (UK)</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="uku39460@toaik.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=uku39460@toaik.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=uku39460@toaik.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=uku39460@toaik.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=uku39460@toaik.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=uku39460@toaik.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="uku39460@toaik.com">
+                                                            <input type="hidden" name="password" value="uku39460@toaik.com">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=uku39460@toaik.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=uku39460@toaik.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>13</td>
+                                        <td>Fernando</td>
+                                        <td>De jesús </td>
+                                        <td>luisadriandejesus7@gmail.com</td>
+                                        <td>Venezuela</td>
+                                        <td>Mini</td>
+                                        <td>USD 15</td>
+                                        <td>USD 2435</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="luisadriandejesus7@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=luisadriandejesus7@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=luisadriandejesus7@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=luisadriandejesus7@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=luisadriandejesus7@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=luisadriandejesus7@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="luisadriandejesus7@gmail.com">
+                                                            <input type="hidden" name="password" value="LUISadrian2010.">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=luisadriandejesus7@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=luisadriandejesus7@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>14</td>
+                                        <td>HGFJHG</td>
+                                        <td>FHJGFHG</td>
+                                        <td>wamezixe@forexnews.bg</td>
+                                        <td>India</td>
+                                        <td>Mini</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="wamezixe@forexnews.bg">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=wamezixe@forexnews.bg">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=wamezixe@forexnews.bg">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=wamezixe@forexnews.bg">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=wamezixe@forexnews.bg">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=wamezixe@forexnews.bg">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="wamezixe@forexnews.bg">
+                                                            <input type="hidden" name="password" value="Vpk@123456">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=wamezixe@forexnews.bg">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=wamezixe@forexnews.bg">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>15</td>
+                                        <td>Pablo </td>
+                                        <td>Gonzalez </td>
+                                        <td>pgnv.65@gmail.com</td>
+                                        <td>Venezuela</td>
+                                        <td>Mini</td>
+                                        <td>USD 98</td>
+                                        <td>USD 5728</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="pgnv.65@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=pgnv.65@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=pgnv.65@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=pgnv.65@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=pgnv.65@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=pgnv.65@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="pgnv.65@gmail.com">
+                                                            <input type="hidden" name="password" value="Na881369*?">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=pgnv.65@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=pgnv.65@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>16</td>
+                                        <td>Pieter</td>
+                                        <td>Zwanepoel</td>
+                                        <td>ptrzpl@gmail.com</td>
+                                        <td>South Africa</td>
+                                        <td>Mini</td>
+                                        <td>ZAR 5000</td>
+                                        <td>ZAR 2000000</td>
+                                        <td>ZAR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="ptrzpl@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=ptrzpl@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=ptrzpl@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=ptrzpl@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=ptrzpl@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=ptrzpl@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="ptrzpl@gmail.com">
+                                                            <input type="hidden" name="password" value="pbfz3780">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=ptrzpl@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=ptrzpl@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>17</td>
+                                        <td>qweenn</td>
+                                        <td>qweenn</td>
+                                        <td>qweenn213@pdood.com</td>
+                                        <td>Afghanistan</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="qweenn213@pdood.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=qweenn213@pdood.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=qweenn213@pdood.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=qweenn213@pdood.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=qweenn213@pdood.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=qweenn213@pdood.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="qweenn213@pdood.com">
+                                                            <input type="hidden" name="password" value="qweennqweenn">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=qweenn213@pdood.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=qweenn213@pdood.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>18</td>
+                                        <td>Graham John </td>
+                                        <td>Baldwin </td>
+                                        <td>samsemiko@gmail.com</td>
+                                        <td>Malaysia</td>
+                                        <td>Mini</td>
+                                        <td>MYR 2724</td>
+                                        <td>MYR 2085986</td>
+                                        <td>MYR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="samsemiko@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=samsemiko@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=samsemiko@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=samsemiko@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=samsemiko@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=samsemiko@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="samsemiko@gmail.com">
+                                                            <input type="hidden" name="password" value="Baldwin1948">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=samsemiko@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=samsemiko@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>19</td>
+                                        <td>Thembi Shilenge </td>
+                                        <td>Portia </td>
+                                        <td>sundayhope002@gmail.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>USD 30000</td>
+                                        <td>USD 780000</td>
+                                        <td>USD 6500</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="sundayhope002@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=sundayhope002@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=sundayhope002@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=sundayhope002@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=sundayhope002@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=sundayhope002@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="sundayhope002@gmail.com">
+                                                            <input type="hidden" name="password" value="Hopezy1212">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=sundayhope002@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=sundayhope002@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>20</td>
+                                        <td>Reotshepile</td>
+                                        <td>Modieginyana</td>
+                                        <td>modieginyanareotshepile@gmail.com</td>
+                                        <td>South Africa</td>
+                                        <td>Mini</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="modieginyanareotshepile@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=modieginyanareotshepile@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=modieginyanareotshepile@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=modieginyanareotshepile@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=modieginyanareotshepile@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=modieginyanareotshepile@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="modieginyanareotshepile@gmail.com">
+                                                            <input type="hidden" name="password" value="THE SAME THING">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=modieginyanareotshepile@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=modieginyanareotshepile@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>21</td>
+                                        <td>Laura isabel </td>
+                                        <td>Ramirez</td>
+                                        <td>lauraram397@gmail.com</td>
+                                        <td>Mexico</td>
+                                        <td>Mini</td>
+                                        <td>MXN 0</td>
+                                        <td>MXN 0</td>
+                                        <td>MXN 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="lauraram397@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=lauraram397@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=lauraram397@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=lauraram397@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=lauraram397@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=lauraram397@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="lauraram397@gmail.com">
+                                                            <input type="hidden" name="password" value="141322">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=lauraram397@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=lauraram397@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>22</td>
+                                        <td>admins</td>
+                                        <td>admins</td>
+                                        <td>carr196856@nelcoapps.com</td>
+                                        <td>Afghanistan</td>
+                                        <td>Mini</td>
+                                        <td>AED 0</td>
+                                        <td>AED 0</td>
+                                        <td>AED 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="carr196856@nelcoapps.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=carr196856@nelcoapps.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=carr196856@nelcoapps.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=carr196856@nelcoapps.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=carr196856@nelcoapps.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=carr196856@nelcoapps.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="carr196856@nelcoapps.com">
+                                                            <input type="hidden" name="password" value="carr196856">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=carr196856@nelcoapps.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=carr196856@nelcoapps.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>23</td>
+                                        <td>UshertY</td>
+                                        <td>Juikol</td>
+                                        <td>totadrian25@gmail.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>NGN 0</td>
+                                        <td>NGN 0</td>
+                                        <td>NGN 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="totadrian25@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=totadrian25@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=totadrian25@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=totadrian25@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=totadrian25@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=totadrian25@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="totadrian25@gmail.com">
+                                                            <input type="hidden" name="password" value="Goodlife@23">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=totadrian25@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=totadrian25@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>24</td>
+                                        <td>Martha</td>
+                                        <td>Anne</td>
+                                        <td>marthaannechatbox@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="marthaannechatbox@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=marthaannechatbox@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=marthaannechatbox@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=marthaannechatbox@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=marthaannechatbox@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=marthaannechatbox@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="marthaannechatbox@gmail.com">
+                                                            <input type="hidden" name="password" value="senaTor617875.">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=marthaannechatbox@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=marthaannechatbox@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>25</td>
+                                        <td>Diana </td>
+                                        <td>Benito Bascuñana </td>
+                                        <td>dianabenitobascu@gmail.com</td>
+                                        <td>Spain</td>
+                                        <td>Mini</td>
+                                        <td>EUR 400</td>
+                                        <td>EUR 103</td>
+                                        <td>EUR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="dianabenitobascu@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=dianabenitobascu@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=dianabenitobascu@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=dianabenitobascu@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=dianabenitobascu@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=dianabenitobascu@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="dianabenitobascu@gmail.com">
+                                                            <input type="hidden" name="password" value="kim39Didi47">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=dianabenitobascu@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=dianabenitobascu@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>26</td>
+                                        <td>Eveline</td>
+                                        <td>Fereeira</td>
+                                        <td>ernestinepillayprivatechat@gmail.com</td>
+                                        <td>Brazil</td>
+                                        <td>Mini</td>
+                                        <td>BRL 5000</td>
+                                        <td>BRL 64550</td>
+                                        <td>BRL 1250</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="ernestinepillayprivatechat@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=ernestinepillayprivatechat@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=ernestinepillayprivatechat@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=ernestinepillayprivatechat@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=ernestinepillayprivatechat@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=ernestinepillayprivatechat@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="ernestinepillayprivatechat@gmail.com">
+                                                            <input type="hidden" name="password" value="senaTor617875">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=ernestinepillayprivatechat@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=ernestinepillayprivatechat@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>27</td>
+                                        <td>Joshua </td>
+                                        <td>Williams</td>
+                                        <td>jwmw1792@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>BDT 0</td>
+                                        <td>BDT 0</td>
+                                        <td>BDT 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="jwmw1792@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=jwmw1792@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=jwmw1792@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=jwmw1792@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=jwmw1792@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=jwmw1792@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="jwmw1792@gmail.com">
+                                                            <input type="hidden" name="password" value="">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=jwmw1792@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=jwmw1792@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>28</td>
+                                        <td>Joshua</td>
+                                        <td>Williams</td>
+                                        <td>bluetichxund@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>BDT 0</td>
+                                        <td>BDT 0</td>
+                                        <td>BDT 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="bluetichxund@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=bluetichxund@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=bluetichxund@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=bluetichxund@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=bluetichxund@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=bluetichxund@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="bluetichxund@gmail.com">
+                                                            <input type="hidden" name="password" value="Joshjr1792">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=bluetichxund@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=bluetichxund@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>29</td>
+                                        <td>Luis</td>
+                                        <td>Sinay</td>
+                                        <td>Luisinay7@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="Luisinay7@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=Luisinay7@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=Luisinay7@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=Luisinay7@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=Luisinay7@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=Luisinay7@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="Luisinay7@gmail.com">
+                                                            <input type="hidden" name="password" value="405162Aa$">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=Luisinay7@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=Luisinay7@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>30</td>
+                                        <td>Facundo </td>
+                                        <td>Spring </td>
+                                        <td>facundospring784@gmail.com</td>
+                                        <td>Argentina</td>
+                                        <td>Mini</td>
+                                        <td>ARS 0</td>
+                                        <td>ARS 0</td>
+                                        <td>ARS 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="facundospring784@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=facundospring784@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=facundospring784@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=facundospring784@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=facundospring784@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=facundospring784@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="facundospring784@gmail.com">
+                                                            <input type="hidden" name="password" value="Gael2025$$">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=facundospring784@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=facundospring784@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>31</td>
+                                        <td>Fabian </td>
+                                        <td>Jovandré</td>
+                                        <td>Fabianjovadrpofadder@gmail.com</td>
+                                        <td>South Africa</td>
+                                        <td>Mini</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="Fabianjovadrpofadder@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=Fabianjovadrpofadder@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=Fabianjovadrpofadder@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=Fabianjovadrpofadder@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=Fabianjovadrpofadder@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=Fabianjovadrpofadder@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="Fabianjovadrpofadder@gmail.com">
+                                                            <input type="hidden" name="password" value="200021">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=Fabianjovadrpofadder@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=Fabianjovadrpofadder@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>32</td>
+                                        <td>Denyefa</td>
+                                        <td>Deinfegha</td>
+                                        <td>deinsdennison@gmail.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="deinsdennison@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=deinsdennison@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=deinsdennison@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=deinsdennison@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=deinsdennison@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=deinsdennison@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="deinsdennison@gmail.com">
+                                                            <input type="hidden" name="password" value="123456">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=deinsdennison@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=deinsdennison@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>33</td>
+                                        <td>Adams</td>
+                                        <td>Adams </td>
+                                        <td>0xchidera1@gmail.com</td>
+                                        <td>Afghanistan</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="0xchidera1@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=0xchidera1@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=0xchidera1@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=0xchidera1@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=0xchidera1@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=0xchidera1@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="0xchidera1@gmail.com">
+                                                            <input type="hidden" name="password" value="123456aA*">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=0xchidera1@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=0xchidera1@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>34</td>
+                                        <td>Ebieh</td>
+                                        <td>Julius</td>
+                                        <td>jeditechlimited@gmail.com</td>
+                                        <td>Nigeria</td>
+                                        <td>Mini</td>
+                                        <td>BOB 0</td>
+                                        <td>BOB 0</td>
+                                        <td>BOB 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="jeditechlimited@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=jeditechlimited@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=jeditechlimited@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=jeditechlimited@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=jeditechlimited@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=jeditechlimited@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="jeditechlimited@gmail.com">
+                                                            <input type="hidden" name="password" value="08076197625">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=jeditechlimited@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=jeditechlimited@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>35</td>
+                                        <td>Ernest</td>
+                                        <td>James</td>
+                                        <td>ernestjames748@gmail.com</td>
+                                        <td>South Africa</td>
+                                        <td>Mini</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>ZAR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="ernestjames748@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=ernestjames748@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=ernestjames748@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=ernestjames748@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=ernestjames748@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=ernestjames748@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="ernestjames748@gmail.com">
+                                                            <input type="hidden" name="password" value="Celokuhleb@8202">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=ernestjames748@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=ernestjames748@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>36</td>
+                                        <td>Agnes </td>
+                                        <td>Dorthe </td>
+                                        <td>agnesdorthe86@gmail.com</td>
+                                        <td>Sweden</td>
+                                        <td>Mini</td>
+                                        <td>EUR 0</td>
+                                        <td>EUR 0</td>
+                                        <td>EUR 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="agnesdorthe86@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=agnesdorthe86@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=agnesdorthe86@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=agnesdorthe86@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=agnesdorthe86@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=agnesdorthe86@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="agnesdorthe86@gmail.com">
+                                                            <input type="hidden" name="password" value="@Agnes1122">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=agnesdorthe86@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=agnesdorthe86@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>37</td>
+                                        <td>Ann</td>
+                                        <td>Stockton</td>
+                                        <td>annadina07@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="annadina07@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=annadina07@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=annadina07@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=annadina07@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=annadina07@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=annadina07@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="annadina07@gmail.com">
+                                                            <input type="hidden" name="password" value="pIvbex-0juqfy-fycdap">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=annadina07@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=annadina07@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>38</td>
+                                        <td>Ines</td>
+                                        <td>Paredes</td>
+                                        <td>inesparedes17@gmail.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="inesparedes17@gmail.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=inesparedes17@gmail.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=inesparedes17@gmail.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=inesparedes17@gmail.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=inesparedes17@gmail.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=inesparedes17@gmail.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="inesparedes17@gmail.com">
+                                                            <input type="hidden" name="password" value="Euromania@33">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=inesparedes17@gmail.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=inesparedes17@gmail.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr class="mb-5">
+                                        <td>39</td>
+                                        <td>Eraina</td>
+                                        <td>Grubbs</td>
+                                        <td>Erainagrubbs@yahoo.com</td>
+                                        <td>United States</td>
+                                        <td>Mini</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>USD 0</td>
+                                        <td>verified</td>
+                                        <td>not_verified</td>
+                                        <td>active</td>
+                                        <td>
+                                            
+                                                    <form action="php/block_user.php" method="POST">
+                                                        <input type="hidden" name="email" id="" value="Erainagrubbs@yahoo.com">
+                                                        <button class="btn btn-danger">Block</button>
+                                                    </form>
+                                                                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a class="btn btn-primary text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                more
+                                                </a>
+
+                                                <ul class="dropdown-menu" style="z-index:1000;">
+                                                    <li><a class="dropdown-item" href="top-up.php?email=Erainagrubbs@yahoo.com">Top up</a></li>
+                                                    <li><a class="dropdown-item" href="debit-from.php?email=Erainagrubbs@yahoo.com">Debit From</a></li>
+                                                    <li><a class="dropdown-item" href="message.php?email=Erainagrubbs@yahoo.com">Message</a></li>
+                                                    <li><a class="dropdown-item" href="trade.php?email=Erainagrubbs@yahoo.com">Trade</a></li>
+                                                    <!-- <li><a class="dropdown-item" href="edit-profile.php?email=Erainagrubbs@yahoo.com">Edit Profile</a></li> -->
+                                                    <li>
+                                                       <form action="php/login.php" method="POST">
+                                                            <input type="hidden" name="email" value="Erainagrubbs@yahoo.com">
+                                                            <input type="hidden" name="password" value="Kendakk1!">
+                                                         <button type="submit" class="dropdown-item">Login as User</button>
+                                                       </form>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="php/clear_account.php?email=Erainagrubbs@yahoo.com">Clear Account</a></li>
+                                                    <li><a class="dropdown-item" href="php/delete_user.php?email=Erainagrubbs@yahoo.com">Delete Account</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+   <!-- footer start-->
+   <footer class="footer">
+          <div class="container-fluid">
+          
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="assets/js/icons/feather-icon/feather-icon.js"></script>
+    
+    <!-- scrollbar js-->
+    <script src="assets/js/scrollbar/simplebar.js"></script>
+    <script src="assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="assets/js/sidebar-menu.js"></script>
+    <script src="assets/js/sidebar-pin.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/calendar/fullcalendar.min.js"></script>
+    <script src="assets/js/calendar/fullcalendar-custom.js"></script>
+    <script src="assets/js/calendar/fullcalender.js"></script>
+    <script src="assets/js/calendar/custom-calendar.js"></script>
+    <script src="assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="assets/js/chart/apex-chart/moment.min.js"></script>
+    <script src="assets/js/notify/bootstrap-notify.min.js"></script>
+    <script src="assets/js/vector-map/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-us-aea-en.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-uk-mill-en.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-au-mill.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-chicago-mill-en.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-in-mill.js"></script>
+    <script src="assets/js/vector-map/map/jquery-jvectormap-asia-mill.js"></script>
+    <script src="assets/js/dashboard/default.js"></script>
+    <!-- <script src="assets/js/notify/index.js"></script> -->
+    <script src="assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/datatable/datatables/datatable.custom.js"></script>
+    <script src="assets/js/datatable/datatables/datatable.custom1.js"></script>
+    <script src="assets/js/datepicker/date-picker/datepicker.js"></script>
+    <script src="assets/js/datepicker/date-picker/datepicker.en.js"></script>
+    <script src="assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <script src="assets/js/typeahead/handlebars.js"></script>
+    <script src="assets/js/typeahead/typeahead.bundle.js"></script>
+    <script src="assets/js/typeahead/typeahead.custom.js"></script>
+    <script src="assets/js/typeahead-search/handlebars.js"></script>
+    <script src="assets/js/typeahead-search/typeahead-custom.js"></script>
+    <script src="assets/js/vector-map/map-vector.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/theme-customizer/customizer.js"></script> -->
+    <!-- Plugin used-->
+  </body>
+
+<!-- Mirrored from admin.pixelstrap.net/crocs/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Apr 2025 18:29:43 GMT -->
+</html>
