@@ -1,0 +1,1796 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Admin, welcome to ElitecryptoFX</title>
+    <link rel="shortcut icon" href="../images/dollar-sign.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/dashboard.css">
+</head>
+<style>
+        @media screen and (min-width: 768px) {
+            .fixed-width {
+                width: 100%;
+                margin: 0 0%;
+            }
+            
+            .side-panel-right {
+                display: none;
+                width: 30%;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .fixed-width {
+                width: 80%;
+                transform: translateX(5%);
+                margin: 0 15%;
+            }
+
+            .side-panel-left {
+                width: 20%;
+                display: block;
+            }
+        }
+    </style>
+
+<body>
+    <nav>
+        <article>
+            <ul>
+                <li style="display: flex; align-items: center;">
+                    <i class="material-icons" id='bars' style="color: #6494AE;">menu</i>
+                    <img src="../images/dashboard-logo.png" width="110px">
+                </li>
+
+                <li style='transform: translateY(-15px)'>
+                    <a href="../dashboard/index"><button id="nav-trade-btn">Trade</button></a>
+                    <button class='dropdown-btn' style='overflow:hidden; width: 60px; height: 60px; border: 1px solid transparent; transform: translateY(10px)'><img src="../images/avatar.png" width="100%" height='100%' style='border-radius: 50%'></button>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <ul>
+                <li><img src="../images/dashboard-logo.png" width="130px"></li>
+
+                <li style="display: flex; justify-content: space-between; align-items: center;">
+                    <article style="display: flex; padding: 5px;">
+                        <img src="../images/dollar-sign.svg" width="40px" style="margin-right: 5px;">
+                        <div style="font-size: 15px;">
+                            <b style='color: var(--text-color)'>Real Account</b><br>
+                            <span style="font-size: 12px; color: #0BC2D2;">200.00 USD</span><br>
+                            <span style="font-size: 12px; color: #7CBBE3;"><span class="btc"></span> BTC
+                            </span>
+                        </div>
+                    </article>
+
+                    <article style="margin: 0 10px;" id='dropdown-btn'>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <button style='overflow:hidden; width: 50px; height: 50px; border: 1px solid transparent'><img src="../images/avatar.png" width="100%" height='100%' style='border-radius: 50%'></button>
+                            <span style="font-size: 12px; margin: 0 10px;">
+                                <span style="color: #0fec73;">verified</span><br>
+                                <span style="color: var(--text-color);">Super Admin</span>
+                            </span>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+        </article>
+
+    </nav>
+
+    <br><br>
+    <br><br>
+    <div class="side-panel-left" style="padding: 10px;">
+        <ul>
+            <li id="side-bal-m"
+                style=" padding: 5px; border-top: 1px solid #bbd8ff70; border-bottom: 1px solid #bbd8ff70; padding: 10px;">
+                <img src="../images/dollar-sign.svg" width="40px" style="margin-right: 5px;">
+                <div style="font-size: 15px;">
+                    <b>Real Account</b><br>
+                    <span style="font-size: 12px; color: #0BC2D2;">200.00USD</span><br>
+                    <span style="font-size: 12px; color: #7CBBE3;"><span class="btc"></span> BTC
+                        <i class="material-icons"
+                            style="font-size: 13px; transform: translateX(60px);">keyboard_arrow_down</i>
+                    </span>
+                </div>
+            </li>
+
+            <!-- <li id='side-bal-d'
+                style=" padding: 5px; border-top: 1px solid #bbd8ff70; border-bottom: 1px solid #bbd8ff70; padding: 10px;">
+                <p style="font-size: 13px;">AVAILABLE BALANCE</p><br>
+                <p style="font-size: 15px; color: #0971fe;"><span class="btc"></span> <sub style="font-size: 10px;">BTC</sub></p><br>
+                <p style="font-size: 15px;">200.00 <sub style="font-size: 10px;">USD</sub></p>
+            </li> -->
+
+            <br>
+    <a href="../dashboard/index" style='color: var(--text)'><li><i class="fa fa-arrow-left"></i> User Dashboard</a></li>
+    <a href="index"><li class="active"><i class="material-icons">dashboard</i> Dashboard</li></a>
+    <span style="font-size: 10px; font-weight: bold; padding: 0 10px; color: #6494AE;">APPS</span>
+    <a href="fund"><li class=""><i class="material-icons">account_balance_wallet</i>Fund Account </li></a>
+    <a href="fund_profit"><li class=""><i class="material-icons">account_balance_wallet</i>Fund Profit </li></a>
+    <a href="nfts"><li class=""><i class="material-icons">image</i>Create NFTs </li></a>
+    <a href="nft_collections"><li class=""><i class="material-icons">edit</i> NFTs Collections</li></a>
+    <a href="packages"><li class=""><i class="material-icons">check_box</i>Approve Packages</li></a>
+    <a href="add_packages"><li class=""><i class="material-icons">add</i>Packages Panel</li></a>
+    <a href="deposit"><li class=""><i class="material-icons">check_box</i>Approve Deposit</li></a>
+    <a href="profit"><li class=""><i class="material-icons">thumbs_up_down</i>Profit</li></a>
+    <a href="trade"><li class=""><i class="material-icons">compare_arrows</i>Trade Count</li></a>
+    <a href="profit_history"><li class=""><i class="material-icons">insert_chart</i>Profit History</li></a>
+    <a href="transaction_history"><li class=""><i class="material-icons">insert_chart</i>Deposit History</li></a>
+    <a href="withdrawal_history"><li class=""><i class="material-icons">insert_chart</i>Withdrawal History</li></a>
+    <a href="kyc"><li class=""><i class="material-icons">content_copy</i> AML / KYC</li></a>
+    <a href="mail"><li class=""><i class="material-icons">mail_outline</i> Send Mail</li></a>
+    <a href="account_status"><li class=""><i class="material-icons">mail_outline</i> Account Status</li></a>
+    <a href="settings"><li class=""><i class="material-icons">settings</i> Website Settings</li></a>
+    <a href="sus_act"><li class=""><i class="material-icons">stop_screen_share</i> Suspend/Activate Account</li></a>
+    <a href="../dashboard/logout"><li><i class="material-icons">power_settings_new</i> Logout</li></a>
+        </ul>
+        <br><br><br><br><br><br>
+    </div>
+
+    <div class="side-panel-right" style='display: none'><br>
+        <h3 style="text-align: center; color: var(--text-color)">New Trade</h3><br><br>
+        <label for="" style='color: var(--text-color)'>Real Account <sup><i class="fa fa-question-circle"></i></sup></label>
+        <p id='balance'>
+            <img src="../images/tron.svg" width="40px">
+            <span style="margin: 10px;">200.00 USDT</span>
+        </p><br><br>
+        <label for="" style='color: var(--text-color)'>Pair</label><br>
+        <select name="" id="trade_pair">
+            <option value="">select pair</option>
+            <option value="">USDT</option>
+            <option value="">USDT/BTC</option>
+            <option value="">USDT/ETH</option>
+            <option value="">USDT/USDC</option>
+            <option value="">USDT/TRX</option>
+            <option value="">USDT/SOL</option>
+            <option value="">USDT/LTC</option>
+            <option value="">USDT/BNB</option>
+            <option value="">USDT/LINK</option>
+            <option value="">USDT/FTT</option>
+            <option value="">USDT/SHIB</option>
+            <option value="">USDT/ETC</option>
+            <option value="">USDT/TFUEL</option>
+            <option value="">USDT/ADA</option>
+            <option value="">USDT/VET</option>
+        </select>
+        <br><br><br>
+        <label for="" style='color: var(--text-color)'>Trade Amount</label><br>
+        <span style="color: #6494AE; font-size: 13px; position: relative; top:18px; left: 5px; z-index: 2;">USDT</span>
+        <input type="text" id='trade_amount' value=""><br><br><br>
+        <div class="side-panel-right-btn">
+            <button class='trade_button'>Sell<br>
+                19,295.1144
+            </button>
+
+            <button class='trade_button'>Buy<br>
+                19,295.1144
+            </button>
+        </div>
+    </div>
+
+    <div class="side-dropdown">
+        <article style="display: flex;">
+        <button style='overflow:hidden; width: 50px; height: 50px; border: 1px solid transparent; border-radius: 100%'><img src="../images/avatar.png" width="100%" style='border-radius: 50%'></button>
+            <p style="margin: 0 10px;">
+                <b style="color: var(--text);">Amos Orji</b><br>
+                <span style="font-size: 13px; color: #6494AE;">Orjikeyz7@gmail.com</span>
+            </p>
+        </article>
+
+        <article style="color: #6494AE; line-height: 20px;"><br>
+            <span style="font-size: 10px; font-weight: bold; color: var(--text-color)">REAL ACCOUNT</span><br>
+            <span style="font-size: 17px; color: dodgerblue; font-weight: bold;"><span class="btc"></span> <sub>BTC</sub></span><br>
+            <span style="font-size: 13px;">200.00 <sub>USD</sub></span><br>
+            <div style="display: flex; align-items: center; font-size: 13px; color: dodgerblue;">
+                <i class="material-icons" style="font-size: 13px;">account_balance_wallet</i> Deposit
+                <i style="margin: 0 0px 0 20px; font-size: 13px;"  class="material-icons">account_balance_wallet</i> Withdraw   
+            </div>
+        </article>
+
+        <article>
+            <ul style="font-size: 14px;">
+                <a href="index"><li><i class="material-icons" style="font-size: 20px;">account_balance_wallet</i> Wallet</li></a>
+                <a href="settings"><li><i class="material-icons" style="font-size: 20px;">person</i> View Profile</li></a>
+                <a href="settings"><li><i class="material-icons" style="font-size: 20px;">settings</i> settings</li></a>
+                <a href="logout"><li><i class="material-icons" style="font-size: 20px;">power_settings_new</i> Sign Out</li></a>
+                <span>
+                    <h5>Mode Settings</h5><br>
+                    <!-- update mode settings -->
+                        
+
+                    <!-- update mode settings end-->
+                    <a href="index?light=xcode">
+                        <button style='background: white; color: var(--text); border: 1px solid var(--text); padding: 5px; border-radius: 3px;'>Light</button>
+                    </a>
+                    <a href="index?dark=xcode">
+                        <button style='background: var(--text); color: white; border: 1px solid transparent; padding: 5px; border-radius: 3px'>Dark</button>
+                </a>
+                </span>
+                
+            </ul>
+        </article>
+
+    </div>
+
+    <div class="fixed-width"><br><br><br><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.0.3/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.0.1/js/dataTables.select.min.js"></script>
+
+<style>
+    .container {
+        padding: 15px;
+        background: var(--dark-blue);
+        border-radius: 5px;
+        color: var(--text-color);
+    }
+    form input {
+        padding: 10px; 
+        border-radius: 3px;
+        border: 1px solid var(--hover);
+        display: block;
+        width: 100%;
+        background: var(--primary);
+        color: var(--text-color);
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    form label {
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    form button {
+        background: dodgerblue;
+        padding: 9px 15px;
+        display: flex;
+        align-items: center;
+        color: white;
+        border: 1px solid dodgerblue;
+        border-radius: 3px;
+        margin: 5px 0;
+    }
+    #dol {
+        position: absolute; 
+        right: 40px; 
+        transform: translateY(-38px); 
+        z-index: 1; 
+        width: 24px; 
+        height: 23px; 
+        border-radius: 50%; 
+        background: var(--text-color); 
+        color: var(--text);
+    }
+    #container-table {
+        width: 100%;
+        overflow-x: scroll;
+    }
+    #container-table::-webkit-scrollbar {
+        background: transparent;
+        width: 0;
+        height: 0;
+    }
+    table {
+        border-collapse: collapse;
+        border-radius: 5px;
+        width: 100%;
+        /* border: 1px solid var(--text); */
+    }
+	th, td {
+		background: var(--dark);
+        font-size: 13px;
+        color: var(--text-color);
+		border: 1px solid var(--text);
+        text-transform:  capitalize;
+        text-align: center;
+	}
+    .pending {
+        background: #3a1716; 
+        color: #e01a1a;
+        padding: 5px;
+        font-size: 10px;
+        text-transform: lowercase;
+        border-radius: 3px;
+    }
+
+    .success {
+        background: #163A3A; 
+        color: #1AE0A1;
+        padding: 3px;
+        text-transform: lowercase;
+        border-radius: 3px;
+    }
+
+    .suspend {
+        background: #3a3616; 
+        color: #e0ab1a;
+        padding: 3px;
+        text-transform: lowercase;
+        border-radius: 3px;
+    }
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1200px) {}
+</style>
+
+ <div class="container">
+     <div id='container-table'>
+ <table id="example" class="display" style='background: var(--dark)' cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th style='width: 14px'>#</th>
+							<th>Full Name</th>
+							<th>Balance</th>
+							<th>Profit</th>
+							<th>Bonus</th>
+							<th>Won</th>
+							<th>Loss</th>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Phone Number</th>
+							<th>Password</th>
+							<th>Package</th>
+							<th>Package Status</th>
+							<th>Date</th>
+                            <th>Status</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+
+					<tbody>
+                        							<tr>
+                                <td style='background: var(--dark)'>1</td>
+                                <td style='background: var(--dark)'>Super Admin</td>
+                                <td style='background: var(--dark)'>$200.00</td>
+                                <td style='background: var(--dark)'>$1,200.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>9</td>
+                                <td style='background: var(--dark)'>20</td>
+                                <td style='background: var(--dark)'>Admin</td>
+                                <td style='background: var(--dark)'>admin@gmail.com</td>
+                                <td style='background: var(--dark)'>0901252732</td>
+                                <td style='background: var(--dark)'>omile1234@</td>
+                                <td style='background: var(--dark)'>Silver</td>
+                                <td style='background: var(--dark)'>
+                                    <span class='pending'>pending</span>                                </td>
+                                <td style='background: var(--dark)'>2022-09-09 02:57:27</td>
+                                <td style='background: var(--dark)'>
+                                <span class='suspend'>kyc</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=xcode' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>2</td>
+                                <td style='background: var(--dark)'>Ulrich</td>
+                                <td style='background: var(--dark)'>$14,210.00</td>
+                                <td style='background: var(--dark)'>$42,600.00</td>
+                                <td style='background: var(--dark)'>$5,420.00</td>
+                                <td style='background: var(--dark)'>17</td>
+                                <td style='background: var(--dark)'>No lose </td>
+                                <td style='background: var(--dark)'>belinda</td>
+                                <td style='background: var(--dark)'>ulrichgertse80@gmail.com</td>
+                                <td style='background: var(--dark)'>0786986814</td>
+                                <td style='background: var(--dark)'>belinda</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-01 04:13:14</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=36FxyY7hoyc1gEy1K92A' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>3</td>
+                                <td style='background: var(--dark)'>Johannes </td>
+                                <td style='background: var(--dark)'>$10.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>johannes </td>
+                                <td style='background: var(--dark)'>www.ditshegojm251@gmail.com</td>
+                                <td style='background: var(--dark)'>0715750700</td>
+                                <td style='background: var(--dark)'>skutas</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-01 04:42:54</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=4gJVBFEGi63bXPTRxwi2' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>4</td>
+                                <td style='background: var(--dark)'>Nasirali</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>nasi</td>
+                                <td style='background: var(--dark)'>nasirlodhi1979@gmail.com</td>
+                                <td style='background: var(--dark)'>0763573830</td>
+                                <td style='background: var(--dark)'>nasirali1979</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-06 15:17:59</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=LDh7eM63Afis3RIk10b1' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>5</td>
+                                <td style='background: var(--dark)'>Eamon </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>oerson</td>
+                                <td style='background: var(--dark)'>eamonoerson308@gmail.com</td>
+                                <td style='background: var(--dark)'>078 036 9784 </td>
+                                <td style='background: var(--dark)'>eamon85</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-09 21:30:53</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=vcKQ9bQLQ5g6ZQPi0dyo' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>6</td>
+                                <td style='background: var(--dark)'>Widmark van wyk</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>binoristo </td>
+                                <td style='background: var(--dark)'>b.vanwyk@live.com</td>
+                                <td style='background: var(--dark)'>0664548290</td>
+                                <td style='background: var(--dark)'>palida@2525</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-13 04:50:50</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=43e1E419JauVG13hdnKd' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>7</td>
+                                <td style='background: var(--dark)'>Ryan Timotheus </td>
+                                <td style='background: var(--dark)'>$104,856.00</td>
+                                <td style='background: var(--dark)'>$950,000.00</td>
+                                <td style='background: var(--dark)'>$6,509.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>o neil </td>
+                                <td style='background: var(--dark)'>rr9825835@gmail.com</td>
+                                <td style='background: var(--dark)'>0774635855</td>
+                                <td style='background: var(--dark)'>r27o09t1983</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-17 12:50:37</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=2Nzhnq9w5btzmAjcDoYY' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>8</td>
+                                <td style='background: var(--dark)'>Luthando Ntshudu Ryan</td>
+                                <td style='background: var(--dark)'>$9,600.00</td>
+                                <td style='background: var(--dark)'>$9,600.00</td>
+                                <td style='background: var(--dark)'>$300.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>luthando </td>
+                                <td style='background: var(--dark)'>dedechristopher4@gmail.com</td>
+                                <td style='background: var(--dark)'>08126574270</td>
+                                <td style='background: var(--dark)'>dede0306</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-21 21:20:33</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=WM686T9wOoP1eu93vOa4' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>9</td>
+                                <td style='background: var(--dark)'>Luthando</td>
+                                <td style='background: var(--dark)'>$1,300.00</td>
+                                <td style='background: var(--dark)'>$26,500.00</td>
+                                <td style='background: var(--dark)'>$4,520.00</td>
+                                <td style='background: var(--dark)'>11</td>
+                                <td style='background: var(--dark)'>No lose </td>
+                                <td style='background: var(--dark)'>ntshudu</td>
+                                <td style='background: var(--dark)'>ntshuduluthando84@gmail.com</td>
+                                <td style='background: var(--dark)'>0681443845</td>
+                                <td style='background: var(--dark)'>amile@2010</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-21 21:49:42</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=dY0SzIV9qpC9GkI6ToAx' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>10</td>
+                                <td style='background: var(--dark)'>Mzwekhaya </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>hlalukane </td>
+                                <td style='background: var(--dark)'>mzwekhayahlalukana@gmail.com</td>
+                                <td style='background: var(--dark)'>083 607 4675 </td>
+                                <td style='background: var(--dark)'>hlalu@77#</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-24 06:20:15</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=ha2rBW48BBHuR34H3sL3' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>11</td>
+                                <td style='background: var(--dark)'>ÀNGELO WENDELL BURT </td>
+                                <td style='background: var(--dark)'>$13,560.00</td>
+                                <td style='background: var(--dark)'>$12,630.00</td>
+                                <td style='background: var(--dark)'>$600.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>angelob1238453</td>
+                                <td style='background: var(--dark)'>bangelowendell@gmail.com</td>
+                                <td style='background: var(--dark)'>0761409038</td>
+                                <td style='background: var(--dark)'>awz1!b1?</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-11-29 13:03:40</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=2hlbY9h0zjQ5tCnZrpUE' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>12</td>
+                                <td style='background: var(--dark)'>Mziwethemba janda</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>mzi</td>
+                                <td style='background: var(--dark)'>mziwethembajanda923@gmail.com</td>
+                                <td style='background: var(--dark)'>0799073423</td>
+                                <td style='background: var(--dark)'>wxquc3nsnhtgcts</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-15 10:46:59</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=0e2XqeH6L0hbJWE8qG2G' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>13</td>
+                                <td style='background: var(--dark)'>Mziwethemba </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>mzi</td>
+                                <td style='background: var(--dark)'>jandamziwethemba923@gmail.com9</td>
+                                <td style='background: var(--dark)'>0799073423</td>
+                                <td style='background: var(--dark)'>126099</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-15 12:14:10</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=w3lRq9ZuoN00FIrFagcS' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>14</td>
+                                <td style='background: var(--dark)'>Mziwethemba </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>mzi</td>
+                                <td style='background: var(--dark)'>jandamziwethemba923@gmail.com</td>
+                                <td style='background: var(--dark)'>0799073423</td>
+                                <td style='background: var(--dark)'>mj1200</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-15 12:17:07</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=mk7DkjiEMouIYvWEmgOW' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>15</td>
+                                <td style='background: var(--dark)'>Lenford Ndumiso </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>cwele </td>
+                                <td style='background: var(--dark)'>ndumiso.cwele@gmail.com</td>
+                                <td style='background: var(--dark)'>0725969385 </td>
+                                <td style='background: var(--dark)'>bk2000</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-29 23:59:03</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Rmots1W1Jqb5T3HX9iHa' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>16</td>
+                                <td style='background: var(--dark)'>Bukho</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>cwele</td>
+                                <td style='background: var(--dark)'>bukho@gmail.com</td>
+                                <td style='background: var(--dark)'>+27 72 596 9385</td>
+                                <td style='background: var(--dark)'>bukho2000</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-30 00:54:43</td>
+                                <td style='background: var(--dark)'>
+                                <span class='pending'>pending</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=bGwSNs5FTp1rU6VH5S45' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>17</td>
+                                <td style='background: var(--dark)'>Ndumiso </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>cwele</td>
+                                <td style='background: var(--dark)'>ndumiso.cwele@gmail.com</td>
+                                <td style='background: var(--dark)'>+27 72 596 9385</td>
+                                <td style='background: var(--dark)'>bukho@321</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-30 00:58:05</td>
+                                <td style='background: var(--dark)'>
+                                <span class='pending'>pending</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=9s2735dyI85ALQvbMGgo' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>18</td>
+                                <td style='background: var(--dark)'>Arthur </td>
+                                <td style='background: var(--dark)'>$68,020.00</td>
+                                <td style='background: var(--dark)'>$392,045.00</td>
+                                <td style='background: var(--dark)'>$16,250.00</td>
+                                <td style='background: var(--dark)'>40</td>
+                                <td style='background: var(--dark)'>04</td>
+                                <td style='background: var(--dark)'>mazibuko </td>
+                                <td style='background: var(--dark)'>mazibukoarthur3@gmail.com</td>
+                                <td style='background: var(--dark)'>0835396635 </td>
+                                <td style='background: var(--dark)'>mazibuko24#</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2024-12-31 01:31:42</td>
+                                <td style='background: var(--dark)'>
+                                <span class='suspend'>insurance</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=x2xzKv5nTZG0CC2mlvt0' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>19</td>
+                                <td style='background: var(--dark)'>Henry </td>
+                                <td style='background: var(--dark)'>$10,250.00</td>
+                                <td style='background: var(--dark)'>$156,985.00</td>
+                                <td style='background: var(--dark)'>$16,250.00</td>
+                                <td style='background: var(--dark)'>96</td>
+                                <td style='background: var(--dark)'>09</td>
+                                <td style='background: var(--dark)'>charles </td>
+                                <td style='background: var(--dark)'>descerineh11@gmail.com</td>
+                                <td style='background: var(--dark)'>0814811012</td>
+                                <td style='background: var(--dark)'>kearac16%</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-01-03 01:43:17</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Pj2Ma08o53ZGEhICCUgx' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>20</td>
+                                <td style='background: var(--dark)'>Henry </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>smith </td>
+                                <td style='background: var(--dark)'>astonhenrysmith17@gmail.com</td>
+                                <td style='background: var(--dark)'>0612317205 </td>
+                                <td style='background: var(--dark)'>henry$mith17</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-01-05 03:01:45</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=b4ATGohS8vR3lqkhpYF3' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>21</td>
+                                <td style='background: var(--dark)'>Lorenzo</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>job</td>
+                                <td style='background: var(--dark)'>joblorenzo11@gmail.com</td>
+                                <td style='background: var(--dark)'>0760227476</td>
+                                <td style='background: var(--dark)'>khalil@1234</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-01-05 03:20:03</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=38f9xKeF90k3S66tjdz1' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>22</td>
+                                <td style='background: var(--dark)'>Sydney Baker</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>sydneybakerrr</td>
+                                <td style='background: var(--dark)'>sydney.baker81@ninonow.com</td>
+                                <td style='background: var(--dark)'>447946790132</td>
+                                <td style='background: var(--dark)'>syd!ba5sy7</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-01-21 11:14:39</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Cfn897af980HzZCY8dys' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>23</td>
+                                <td style='background: var(--dark)'>Nomfundo</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>nangu</td>
+                                <td style='background: var(--dark)'>lazeecleaner@gmail.com</td>
+                                <td style='background: var(--dark)'>0631745264</td>
+                                <td style='background: var(--dark)'>#clapper1</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-01-30 11:41:17</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=s1mK0BtpfClE4jP3N1Jo' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>24</td>
+                                <td style='background: var(--dark)'>Nomfundo</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>nangu</td>
+                                <td style='background: var(--dark)'>nominangu888@gmail.com</td>
+                                <td style='background: var(--dark)'>0631745264</td>
+                                <td style='background: var(--dark)'>#clapper1</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-01-30 11:43:26</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=47YPd5Ivj81p91jpyNYn' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>25</td>
+                                <td style='background: var(--dark)'>FSDFSD</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>sdfs3453</td>
+                                <td style='background: var(--dark)'>kicepu@thetechnext.net</td>
+                                <td style='background: var(--dark)'>0623324234</td>
+                                <td style='background: var(--dark)'>jhsk1234s</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-04 00:45:04</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=F7pQu78wG7KMUHurE8cp' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>26</td>
+                                <td style='background: var(--dark)'>DASDASD</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>asd23423</td>
+                                <td style='background: var(--dark)'>d9eeq1jmq0@vafyxh.com</td>
+                                <td style='background: var(--dark)'>0623324234</td>
+                                <td style='background: var(--dark)'>jhsk1234s</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-04 00:46:13</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=21es7Tr9OBsc98etV0ln' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>27</td>
+                                <td style='background: var(--dark)'>SDFSDF</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>64dfsdfs</td>
+                                <td style='background: var(--dark)'>9o1eb0sghg@vafyxh.com</td>
+                                <td style='background: var(--dark)'>0623324234</td>
+                                <td style='background: var(--dark)'>jhsk1234s</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-04 00:47:13</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=5u0plaznEdDeH5GaHuB5' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>28</td>
+                                <td style='background: var(--dark)'>Abrahams</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>avron phane</td>
+                                <td style='background: var(--dark)'>avronabrahams@gmail.com</td>
+                                <td style='background: var(--dark)'>078 980 2463</td>
+                                <td style='background: var(--dark)'>abrahams07</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-06 00:06:20</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=yRlLyCQzgwEM9305KUug' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>29</td>
+                                <td style='background: var(--dark)'>Abrahams</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>avron phane</td>
+                                <td style='background: var(--dark)'>abronabrahams@gmail.ckm</td>
+                                <td style='background: var(--dark)'>078 980 2463</td>
+                                <td style='background: var(--dark)'>6907075070086</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-06 00:16:42</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=1UPCKmTu5lORIsjf6BzN' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>30</td>
+                                <td style='background: var(--dark)'>Abrahams</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>avron phane</td>
+                                <td style='background: var(--dark)'>avronabrahams@gmail.com</td>
+                                <td style='background: var(--dark)'>078 980 2463</td>
+                                <td style='background: var(--dark)'>6907075070086</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-06 00:23:41</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=6KS2z2uDNHpZ1u7UrB6U' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>31</td>
+                                <td style='background: var(--dark)'>Skhumbuzo</td>
+                                <td style='background: var(--dark)'>$91,000.00</td>
+                                <td style='background: var(--dark)'>$652,100.00</td>
+                                <td style='background: var(--dark)'>$3,218.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>christian nodongwe </td>
+                                <td style='background: var(--dark)'>sikhumbuzo.nodongwe@gmail.com</td>
+                                <td style='background: var(--dark)'>+27840705642</td>
+                                <td style='background: var(--dark)'>nodongwe1234@</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-21 01:36:33</td>
+                                <td style='background: var(--dark)'>
+                                <span class='suspend'>insurance</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=9743WwUPzm8X9b13roUJ' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>32</td>
+                                <td style='background: var(--dark)'>Henry</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>zuckabreg</td>
+                                <td style='background: var(--dark)'>marvelmarvel492@gmail.com</td>
+                                <td style='background: var(--dark)'>+ 17793728978</td>
+                                <td style='background: var(--dark)'>419666</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-26 22:51:51</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=rhW5uH0g38qgrgc923cM' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>33</td>
+                                <td style='background: var(--dark)'>Henry</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>zuckabreg</td>
+                                <td style='background: var(--dark)'>randyjoel25800@gmail.com</td>
+                                <td style='background: var(--dark)'>+ 17793728978</td>
+                                <td style='background: var(--dark)'>419666</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-26 22:53:37</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=I3kiNtmURATcOYYo4kAo' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>34</td>
+                                <td style='background: var(--dark)'>Henry</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>zuckabreg</td>
+                                <td style='background: var(--dark)'>marvelmarvel492@gmail.com</td>
+                                <td style='background: var(--dark)'>+ 17793728978</td>
+                                <td style='background: var(--dark)'>419666</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-26 22:54:15</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=63pdonZAZ5cKvt4Q78k8' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>35</td>
+                                <td style='background: var(--dark)'>Edward Gottwalt </td>
+                                <td style='background: var(--dark)'>$80,376.00</td>
+                                <td style='background: var(--dark)'>$86,400.00</td>
+                                <td style='background: var(--dark)'>$6,508.00</td>
+                                <td style='background: var(--dark)'>12</td>
+                                <td style='background: var(--dark)'>04</td>
+                                <td style='background: var(--dark)'>holly</td>
+                                <td style='background: var(--dark)'>shawn_gottwalt@yahoo.com</td>
+                                <td style='background: var(--dark)'>3206305406</td>
+                                <td style='background: var(--dark)'>holly?max2023</td>
+                                <td style='background: var(--dark)'>Gold</td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-02-27 19:33:36</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=70pmpqsoEeVVzJdOYOzq' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>36</td>
+                                <td style='background: var(--dark)'>Jacob Thabo Makena </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>tomane</td>
+                                <td style='background: var(--dark)'>tomanethabo@gmail.com</td>
+                                <td style='background: var(--dark)'>0723849490</td>
+                                <td style='background: var(--dark)'>thab0#12</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-03-25 13:38:35</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=2s62GmBh9b9zi25b659W' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>37</td>
+                                <td style='background: var(--dark)'>Molefi Sydney Mokoma </td>
+                                <td style='background: var(--dark)'>$216,280.00</td>
+                                <td style='background: var(--dark)'>$726,712.00</td>
+                                <td style='background: var(--dark)'>$17,425.00</td>
+                                <td style='background: var(--dark)'>108</td>
+                                <td style='background: var(--dark)'>09</td>
+                                <td style='background: var(--dark)'>molefi </td>
+                                <td style='background: var(--dark)'>molefisydneymokoma@gmail.com</td>
+                                <td style='background: var(--dark)'>069 976 0551</td>
+                                <td style='background: var(--dark)'>lenah1965</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-03-25 20:09:48</td>
+                                <td style='background: var(--dark)'>
+                                <span class='suspend'>insurance</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=2MR72Sjoz34EFYH8Lj3B' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>38</td>
+                                <td style='background: var(--dark)'>Sifiso Wiseman Mpumelelo </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>chamane </td>
+                                <td style='background: var(--dark)'>chamanesifiso28@gmail.com</td>
+                                <td style='background: var(--dark)'>0657032307</td>
+                                <td style='background: var(--dark)'>nosi1@04</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-04-12 08:34:03</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=PxO4XtnE4ZmrjGb9yv4o' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>39</td>
+                                <td style='background: var(--dark)'>Wayne Marais </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>wayne/1984</td>
+                                <td style='background: var(--dark)'>waynemarais648@gmail.com</td>
+                                <td style='background: var(--dark)'>0814364966</td>
+                                <td style='background: var(--dark)'>wayne/1984@</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-04-21 12:04:44</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=njKal7x7p56ZdPs8kydP' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>40</td>
+                                <td style='background: var(--dark)'>Roger </td>
+                                <td style='background: var(--dark)'>$10.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$6,120.00</td>
+                                <td style='background: var(--dark)'>17</td>
+                                <td style='background: var(--dark)'>03</td>
+                                <td style='background: var(--dark)'>sparkieroy</td>
+                                <td style='background: var(--dark)'>sparkieroy.roger@gmail.com</td>
+                                <td style='background: var(--dark)'>0624091356 </td>
+                                <td style='background: var(--dark)'>sparkieroy82$$&</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-04-23 12:58:24</td>
+                                <td style='background: var(--dark)'>
+                                <span class='suspend'>tax</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=9L4heKn31Dei2X7OglEY' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>41</td>
+                                <td style='background: var(--dark)'>Siphesihle Mkwanazi</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0789998251</td>
+                                <td style='background: var(--dark)'>siphesihlemkwanazi4@gmail.com</td>
+                                <td style='background: var(--dark)'>0673349035</td>
+                                <td style='background: var(--dark)'>sphere082!</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-05-11 13:52:57</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=t3M50EQdKd13UIjw3TZ0' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>42</td>
+                                <td style='background: var(--dark)'>Nicholas Louw</td>
+                                <td style='background: var(--dark)'>$500.00</td>
+                                <td style='background: var(--dark)'>$28,900.00</td>
+                                <td style='background: var(--dark)'>$6,390.00</td>
+                                <td style='background: var(--dark)'>06</td>
+                                <td style='background: var(--dark)'>00</td>
+                                <td style='background: var(--dark)'>nicholaslouw43</td>
+                                <td style='background: var(--dark)'>nicholaslouw0@gmail.com</td>
+                                <td style='background: var(--dark)'>0760369610</td>
+                                <td style='background: var(--dark)'>igugu@42</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-05-13 13:49:11</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=jRnBa721Wj0iwVdq7CDG' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>43</td>
+                                <td style='background: var(--dark)'>Nicholas Louw</td>
+                                <td style='background: var(--dark)'>$500.00</td>
+                                <td style='background: var(--dark)'>$28,900.00</td>
+                                <td style='background: var(--dark)'>$6,500.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>nicholaslouw43</td>
+                                <td style='background: var(--dark)'>nicholaslouw0@gmail.com</td>
+                                <td style='background: var(--dark)'>0760369610</td>
+                                <td style='background: var(--dark)'>iguguu@42</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-05-13 13:50:31</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=8aom5JvE5fkqTUrdm06F' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>44</td>
+                                <td style='background: var(--dark)'>Nicholas Louw</td>
+                                <td style='background: var(--dark)'>$500.00</td>
+                                <td style='background: var(--dark)'>$650.00</td>
+                                <td style='background: var(--dark)'>$8.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>nicholaslouw43</td>
+                                <td style='background: var(--dark)'>nicholaslouw0@gmail.com</td>
+                                <td style='background: var(--dark)'>0760369610</td>
+                                <td style='background: var(--dark)'>nhuw7fwjtj2jnzc</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-05-13 13:55:01</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=ajG3CmvsURG9C9KHp8TC' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>45</td>
+                                <td style='background: var(--dark)'>Vuyo Wellington Storm </td>
+                                <td style='background: var(--dark)'>$80.00</td>
+                                <td style='background: var(--dark)'>$56,800.00</td>
+                                <td style='background: var(--dark)'>$3,690.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>vuyo </td>
+                                <td style='background: var(--dark)'>vuyostorom@gmail.com</td>
+                                <td style='background: var(--dark)'>0691487309</td>
+                                <td style='background: var(--dark)'>aphelele@08</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-06-11 03:19:04</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=rCp7Ibt3V6uc9Ngua2x0' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>46</td>
+                                <td style='background: var(--dark)'>Nozuko Princess Bokoda </td>
+                                <td style='background: var(--dark)'>$17,605.00</td>
+                                <td style='background: var(--dark)'>$726,712.00</td>
+                                <td style='background: var(--dark)'>$1,320.00</td>
+                                <td style='background: var(--dark)'>88</td>
+                                <td style='background: var(--dark)'>03</td>
+                                <td style='background: var(--dark)'>bokoda</td>
+                                <td style='background: var(--dark)'>bokodanozuko678@gmail.com</td>
+                                <td style='background: var(--dark)'>0655349953</td>
+                                <td style='background: var(--dark)'>princess888</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-06-12 14:45:19</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=t09U0Fb7l49A0SpaPhsG' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>47</td>
+                                <td style='background: var(--dark)'>Denver Van Sitters </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>denavansitters</td>
+                                <td style='background: var(--dark)'>denvervansitter@gmail.com</td>
+                                <td style='background: var(--dark)'>0673826644</td>
+                                <td style='background: var(--dark)'>delana@1966</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-06-18 00:45:17</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Pp9PcykGkwJiqPcoVQCc' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>48</td>
+                                <td style='background: var(--dark)'>Nompumelelo </td>
+                                <td style='background: var(--dark)'>$209.00</td>
+                                <td style='background: var(--dark)'>$79,000.00</td>
+                                <td style='background: var(--dark)'>$6,902.00</td>
+                                <td style='background: var(--dark)'>08</td>
+                                <td style='background: var(--dark)'>No loss </td>
+                                <td style='background: var(--dark)'>nziyana</td>
+                                <td style='background: var(--dark)'>lessernziyana@gmail.co</td>
+                                <td style='background: var(--dark)'>+27721448238</td>
+                                <td style='background: var(--dark)'>0822930636</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-06-25 12:35:11</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Iu6aL56pWf8MWkOwL7d1' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>49</td>
+                                <td style='background: var(--dark)'>Cornell Antonette Nel</td>
+                                <td style='background: var(--dark)'>$110.00</td>
+                                <td style='background: var(--dark)'>$58,000.00</td>
+                                <td style='background: var(--dark)'>$6,905.00</td>
+                                <td style='background: var(--dark)'>06</td>
+                                <td style='background: var(--dark)'>01</td>
+                                <td style='background: var(--dark)'>cornella</td>
+                                <td style='background: var(--dark)'>cagrobbelaar@gmail.com</td>
+                                <td style='background: var(--dark)'>0614047938</td>
+                                <td style='background: var(--dark)'>sonneblom@123</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-07-23 09:10:46</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=L9bPC6zW7HE9bEyt28C8' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>50</td>
+                                <td style='background: var(--dark)'>Clarence</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>busch</td>
+                                <td style='background: var(--dark)'>www.clarencebusch1@gmail.co</td>
+                                <td style='background: var(--dark)'>0661082121</td>
+                                <td style='background: var(--dark)'>clare cebusch12</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-08-21 11:05:16</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Bf435azB6lGy70dryqnP' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>51</td>
+                                <td style='background: var(--dark)'>Omile </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>dede </td>
+                                <td style='background: var(--dark)'>omileexness@gmail.com</td>
+                                <td style='background: var(--dark)'>07079766436</td>
+                                <td style='background: var(--dark)'>omile1234@</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-10-04 07:51:25</td>
+                                <td style='background: var(--dark)'>
+                                <span class='pending'>pending</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=o4Tihg0Gut95VYllkSQ3' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>52</td>
+                                <td style='background: var(--dark)'>Prosper </td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>prosper mour </td>
+                                <td style='background: var(--dark)'>prospermour@gmail.com</td>
+                                <td style='background: var(--dark)'>0684330256</td>
+                                <td style='background: var(--dark)'>candice75</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-10-06 10:31:04</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=hwL8cyEK0TC8hGZrkKbr' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>53</td>
+                                <td style='background: var(--dark)'>Vincent </td>
+                                <td style='background: var(--dark)'>$35,136.00</td>
+                                <td style='background: var(--dark)'>$280.00</td>
+                                <td style='background: var(--dark)'>$6,390.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>vince</td>
+                                <td style='background: var(--dark)'>vincemarc75@gmail.com</td>
+                                <td style='background: var(--dark)'>0789121519</td>
+                                <td style='background: var(--dark)'>kalep@2010#</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-10-12 10:52:22</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=Fa5XR33dogY3q6bZ558E' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            							<tr>
+                                <td style='background: var(--dark)'>54</td>
+                                <td style='background: var(--dark)'>Ivan Mucka</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>$0.00</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>0</td>
+                                <td style='background: var(--dark)'>xrp saint</td>
+                                <td style='background: var(--dark)'>ivanmucka@gmail.com</td>
+                                <td style='background: var(--dark)'>+5977116642</td>
+                                <td style='background: var(--dark)'>ivanmucka1968!</td>
+                                <td style='background: var(--dark)'></td>
+                                <td style='background: var(--dark)'>
+                                                                    </td>
+                                <td style='background: var(--dark)'>2025-10-17 10:55:13</td>
+                                <td style='background: var(--dark)'>
+                                <span class='success'>active</span>
+                                </td>
+                                <td style='background: var(--dark)'>
+                                        <ul id='set' style='display: flex; justify-content: center;'>
+        <a href='index?del=mtGlBOjmbcEpJ3QaYvgK' onClick="javascript: return confirm('Do you wish to delete');"><li data-title='Delete Account' style='color: red'><i class='fa fa-trash'></i></li></a>      
+            </ul>
+                                </td>
+							</tr>
+                            
+					</tbody>
+				</table>
+                </div>
+ </div>
+
+
+<script>
+   function applyDataTable(){
+  
+  $('#example').DataTable( {
+		dom: 'Bfrtip',
+		buttons: [
+			{
+				extend: 'print',
+				text: 'Print all'
+			},
+			{
+				extend: 'print',
+				text: 'Print current page',
+				exportOptions: {
+					modifier: {
+						  page: 'current'
+					}
+				}
+			}
+		],
+		select: true
+	} );
+  
+  
+}
+
+
+$(document).ready(function() {
+  $('#trigger-update').click(function(){
+      $('#example').DataTable().destroy();
+    
+      setTimeout(function(){
+        applyDataTable();
+      },2000);
+       
+  });
+  
+  applyDataTable();
+	
+} );
+
+
+</script>
+
+
+   <div id="mode" style='display: none'>dark</div>
+   </div>
+    <script src="../assets/dashboard.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+// get current btc rate
+    var btc = document.querySelectorAll('.btc')
+    for (let i = 0; i < btc.length; i++) {
+    var url = 'https://blockchain.info/tobtc?currency=USD&value=0'
+        fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(btc[i].textContent = data));
+}
+// get current btc rate end
+
+// dark/light mode toggle
+var mode = document.getElementById('mode');
+    if (mode.textContent == "light") {
+        root.classList.add('dark-mode')        
+    }else if (mode.textContent == "dark") {
+        root.classList.remove('dark-mode')
+    }
+// dark/light mode toggle end
+
+var trade_button = document.querySelectorAll('.trade_button');
+var trade_amount = document.getElementById('trade_amount');
+var trade_pair = document.getElementById('trade_pair');
+for (let i = 0; i < trade_button.length; i++) {
+    trade_button[i].addEventListener('click', function () {
+        if (trade_pair.value == "" && trade_amount.value == "") {
+            swal("ERROR!", "Input's cannot be empty", "warning");        
+        }else {
+            swal("INFO!", "Unable to complete trade at this time", "info");        
+        }
+    })
+}
+    </script>
+</body>
+</html>
