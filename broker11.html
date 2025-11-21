@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+		
+		
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Admin | Manage Users</title>
+    <link href="./interface/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./interface/assets/font-awesome/css/font-awesome.css" rel="stylesheet" >
+    <link href="./interface/assets/css/style.css" rel="stylesheet">
+    <link href="./interface/assets/css/style-responsive.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+	<section id="container" >
+	<header class="header black-bg">
+	      <div class="sidebar-toggle-box">
+	          <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+	      </div>
+	      <a href="#" class="logo"><b>Admin Dashboard</b></a>
+	      <div class="nav notify-row" id="top_menu">
+	      </div>
+	      <div class="top-menu">
+	    	  <ul class="nav pull-right top-menu">
+	              <li><a class="logout" href="./logout.php">Logout</a></li>
+	    	  </ul>
+	      </div>
+	</header>	<aside>
+	<div id="sidebar"  class="nav-collapse ">
+		<ul class="sidebar-menu" id="nav-accordion">             
+		
+			<p class="centered"><a href="#"><img src="./interface/assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+			<h5 class="centered">admin@worldfinancialmarkettrade.com</h5>
+              	  					  				  
+			<li class="sub-menu">
+				<a href="./manage-users.php" >
+					<i class="fa fa-users"></i>
+					<span>Users Details</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-kyc.php" >
+					<i class="fa fa-id-card"></i>
+					<span>Users KYC</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-deposit.php" >
+					<i class="fa fa-money"></i>
+					<span>Manage Deposit</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-profit.php" >
+					<i class="fa fa-money"></i>
+					<span>Manage Profit</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-trade.php" >
+					<i class="fa fa-money"></i>
+					<span>Manage Trade</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-demo.php" >
+					<i class="fa fa-money"></i>
+					<span>Manage D-Balance</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-bonus.php" >
+					<i class="fa fa-money"></i>
+					<span>Manage Bonus</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-withdraw.php" >
+					<i class="fa fa-money"></i>
+					<span>Manage Withdraw</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+			    <a href="./manage-limit.php">
+			        <i class="fa fa-money"></i><span>
+			        Manage Withdraw Limits</span>
+			    </a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-transaction.php" >
+					<i class="fa fa-bar-chart"></i>
+					<span>Manage Transactions</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-upgrade.php" >
+					<i class="fa fa-arrow-up" aria-hidden="true"></i>
+					<span>Manage Upgrade</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-lock.php" >
+					<i class="fa fa-lock"></i>
+					<span>Lock Withdraw</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-notification.php" >
+					<i class="fa fa-commenting" aria-hidden="true"></i>
+					<span>Display Notification</span>
+				</a>
+			</li>
+
+			<li class="sub-menu">
+				<a href="./manage-popup.php" >
+					<i class="fa fa-commenting" aria-hidden="true"></i>
+					<span>Display Popup Notification</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-wallet.php" >
+					<i class="fa fa-usd" aria-hidden="true"></i>
+					<span>Manage Wallets</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-crypto.php" >
+					<i class="fa fa-usd" aria-hidden="true"></i>
+					<span>Buy Crypro</span>
+				</a>
+			</li>
+			
+			<li class="sub-menu">
+				<a href="./manage-password.php" >
+					<i class="fa fa-unlock-alt"></i>
+					<span>Change Password</span>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+</aside>      
+      <section id="main-content">
+          <section class="wrapper">
+          	<h3><i class="fa fa-angle-right"></i> Manage Users</h3>
+				<div class="row">
+				
+                  
+	                  
+                  <div class="col-md-12">
+                      <div class="content-panel" >
+                      <div style="overflow-x:auto">
+                          <table class="table table-striped table-advance table-hover" id="myTable">
+	                  	  	  <h4><i class="fa fa-angle-right"></i> All User Details </h4>
+	                  	  	  <div style="display:inline; padding:5px;"><input type="text" id="myInput" onkeyup="myFunctionSS()" placeholder="Search for details.."> </div>	               	  	                                <thead>
+                              <tr>
+                              <th>Actions</th>
+                              <th>Sno.</th>
+                              <th>UserID</th>
+                              <th>First Name</th>
+                              <th> Last Name</th>
+                              <th> Email Id</th>
+                              <th>Contact no.</th>
+                              <th>Password</th>
+                              <th>Deposit</th>
+                              <th>Country</th>
+                              <th>Account Type</th>
+                              <th>Trade Status</th>
+                              <th>Status</th>
+                              
+                              </tr>
+                              </thead>
+                              <tbody>  
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=belkaditao1@yahoo.fr"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=belkaditao1@yahoo.fr"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>1</td>
+                              	  <td>68af445f0c7f5</td>
+                                  <td>Taoufik</td>
+                                  <td>Belkadi el haloui</td>
+                                  <td>belkaditao1@yahoo.fr</td>
+                                  <td>+971545033039</td>
+                                  <td>F12345@TAoL</td>
+                                  <td>321</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=raitauseteo@gmail.com"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=raitauseteo@gmail.com"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>2</td>
+                              	  <td>68ba2f451e373</td>
+                                  <td>Seteo </td>
+                                  <td>Raitau </td>
+                                  <td>raitauseteo@gmail.com</td>
+                                  <td>9696921</td>
+                                  <td>vvuadreu29</td>
+                                  <td>100</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=salhinabil@outlook.fr"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=salhinabil@outlook.fr"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>3</td>
+                              	  <td>68bef153b3d30</td>
+                                  <td>Nabil</td>
+                                  <td>Salhi</td>
+                                  <td>salhinabil@outlook.fr</td>
+                                  <td>0033637519640</td>
+                                  <td>Nino007k/?</td>
+                                  <td>6870</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=nabouli01s@yahoo.fr"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=nabouli01s@yahoo.fr"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>4</td>
+                              	  <td>68bf4b8a5c4dc</td>
+                                  <td>NABIL</td>
+                                  <td>Salhi</td>
+                                  <td>nabouli01s@yahoo.fr</td>
+                                  <td>0033637519640</td>
+                                  <td>JoujouIsaac001k/?</td>
+                                  <td>9796</td>
+                                  <td>France</td>
+                                  <td>Basic</td>
+                                  <td>activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=salhiassia63@yahoo.com"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=salhiassia63@yahoo.com"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>5</td>
+                              	  <td>68c469683e81c</td>
+                                  <td>Hadda</td>
+                                  <td>Salhi</td>
+                                  <td>salhiassia63@yahoo.com</td>
+                                  <td>+33784842547</td>
+                                  <td>Zhaounene01s?</td>
+                                  <td>0</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=azzeddino87@gmail.com"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=azzeddino87@gmail.com"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>6</td>
+                              	  <td>68d00eb07008e</td>
+                                  <td>RIAD</td>
+                                  <td>Azzeddine</td>
+                                  <td>azzeddino87@gmail.com</td>
+                                  <td>(0033)0751320800</td>
+                                  <td>Azzedtrad75</td>
+                                  <td>378</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=picaultc775@gmail.com"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=picaultc775@gmail.com"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>7</td>
+                              	  <td>68d454d8efffd</td>
+                                  <td>Cédric </td>
+                                  <td>PICAULT </td>
+                                  <td>picaultc775@gmail.com</td>
+                                  <td>0782303168</td>
+                                  <td>Chipieetrouky2</td>
+                                  <td>331</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=lanevicky23@gmail.com"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=lanevicky23@gmail.com"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>8</td>
+                              	  <td>68ea8b8299464</td>
+                                  <td>vicky</td>
+                                  <td>lane</td>
+                                  <td>lanevicky23@gmail.com</td>
+                                  <td>123456789</td>
+                                  <td>11111111</td>
+                                  <td>0</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                            
+                              <tr>                              
+                               <td>
+                                     
+                                 <a href="update-profile.php?email=astraldiantonio902@gmail.com"> 
+                                 <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                 <a href="manage-users.php?demail=astraldiantonio902@gmail.com"> 
+                                 <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
+                                  </td>
+                                  <td>9</td>
+                              	  <td>690a36fbdf544</td>
+                                  <td>ldiantonio</td>
+                                  <td>Stouo</td>
+                                  <td>astraldiantonio902@gmail.com</td>
+                                  <td>+598 95 667 179</td>
+                                  <td>Evuarherhe</td>
+                                  <td>0</td>
+                                  <td></td>
+                                  <td>Basic</td>
+                                  <td>not activated</td>
+                                  <td>verified</td>
+                                 
+                              </tr>                              
+							                              </tbody>
+                          </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+		</section>
+      </section>
+    
+    </section>
+	
+	<script src="./interface/assets/js/jquery.js"></script>
+	<script src="./interface/assets/js/bootstrap.min.js"></script>
+	<script class="include" type="text/javascript" src="./interface/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+	<script src="./interface/assets/js/jquery.scrollTo.min.js"></script>
+	<script src="./interface/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+	<script src="./interface/assets/js/common-scripts.js"></script>
+	<script>
+		$(function(){
+			$('select.styled').customSelect();
+		});
+	</script>
+
+	
+	<script>
+		function sum() {
+		var txtFirstNumberValue = document.getElementById('txt1').value;
+		var txtSecondNumberValue = document.getElementById('txt2').value;
+		var result = parseInt(txtFirstNumberValue) + parseInt(txtSecondNumberValue);
+		if (!isNaN(result)) {
+			document.getElementById('txt3').value = result;			
+		}			
+			 		
+		}
+	</script>
+	
+	<script>
+		function myFunctionSS() {
+			// Declare variables
+			var input, filter, table, tr, td, i, txtValue, j, column_length, count_td;
+			input = document.getElementById("myInput");
+			filter = input.value.toUpperCase();
+			table = document.getElementById("myTable");
+			tr = table.getElementsByTagName("tr");
+			column_length = document.getElementById("myTable").rows[0].cells.length;
+			
+			// Loop through all table rows, and hide those who don't match the search query
+			for (i = 0; i < tr.length; i++) {
+				count_td = 0;
+				for (j = 0; j < column_length-1; j++) {
+					td = tr[i].getElementsByTagName("td")[j];
+					if (td) {
+						if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+							count_td++;
+						}						
+					}
+				}				
+				if (count_td > 0) {
+					tr[i].style.display = "";
+				} else {
+					tr[i].style.display = "none";
+				}
+				
+			}			
+			 		
+		}
+	</script>    
+  </body>
+</html>
